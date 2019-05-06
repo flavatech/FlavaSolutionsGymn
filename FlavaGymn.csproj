@@ -168,12 +168,6 @@
     <Compile Include="user.cs">
       <DependentUpon>NewFlavaGymn.tt</DependentUpon>
     </Compile>
-    <Compile Include="viewStaffStatus.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="viewStaffStatus.Designer.cs">
-      <DependentUpon>viewStaffStatus.cs</DependentUpon>
-    </Compile>
     <EmbeddedResource Include="Staff Screens\SaddStaff.resx">
       <DependentUpon>SaddStaff.cs</DependentUpon>
     </EmbeddedResource>
@@ -207,9 +201,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Admin Screens\addUser.resx">
       <DependentUpon>addUser.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="viewStaffStatus.resx">
-      <DependentUpon>viewStaffStatus.cs</DependentUpon>
     </EmbeddedResource>
     <EntityDeploy Include="NewFlavaGymn.edmx">
       <Generator>EntityModelCodeGenerator</Generator>

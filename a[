@@ -1,0 +1,33 @@
+ AddInstructor.Designer.cs             |   461 [31m--[m
+ AddStaff.Designer.cs                  |   611 [31m--[m
+ AddStaff.cs                           |   201 [31m-[m
+ DAL/userDAL.cs                        |   107 [32m+[m[31m-[m
+ DashBoards/BlogicLayer/Datetime.cs    |     6 [31m-[m
+ DashBoards/BlogicLayer/userBLL.cs     |    29 [31m-[m
+ DashBoards/addUser.Designer.cs        |   656 [31m--[m
+ DashBoards/addUser.cs                 |   126 [31m-[m
+ DashBoards/addUser.resx               |   283 [31m-[m
+ DashBoards/adminDashBoard.Designer.cs |    49 [32m+[m[31m-[m
+ DashBoards/adminDashBoard.cs          |    14 [32m+[m[31m-[m
+ DashBoards/userDashBoard.Designer.cs  |    47 [32m+[m[31m-[m
+ DashBoards/userDashBoard.cs           |    18 [32m+[m[31m-[m
+ FlavaGymn.csproj                      |    79 [32m+[m[31m-[m
+ Login.Designer.cs                     |   237 [31m-[m
+ Login.cs                              |    74 [31m-[m
+ Login.resx                            |   120 [31m-[m
+ MasterDataSet.Designer.cs             | 13368 [31m--------------------------------[m
+ MasterDataSet.xsc                     |     1 [31m-[m
+ MasterDataSet.xsd                     |  1166 [31m---[m
+ MasterDataSet.xss                     |     1 [31m-[m
+ Properties/Resources.Designer.cs      |    54 [32m+[m[31m-[m
+ Properties/Resources.resx             |    17 [32m+[m[31m-[m
+ SelectRole.Designer.cs                |    59 [32m+[m[31m-[m
+ Setup Organization.Designer.cs        |    46 [31m-[m
+ Setup Organization.cs                 |    20 [31m-[m
+ Setup Organization.resx               |   120 [31m-[m
+ System/Web/Security.cs                |     7 [31m-[m
+ addInstructor.cs                      |   178 [31m-[m
+ addInstructor.resx                    |  2283 [31m------[m
+ addStaff.resx                         |  1501 [31m----[m
+ selectRole.cs                         |     4 [32m+[m[31m-[m
+ 32 files changed, 265 insertions(+), 21678 deletions(-)
