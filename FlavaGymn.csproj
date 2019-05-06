@@ -1,0 +1,255 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{16FC2F05-BA9A-4EF8-84EB-9C980F636AD7}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>FlavaGymn</RootNamespace>
+    <AssemblyName>FlavaGymn</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Staff Screens\SaddStaff.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Staff Screens\SaddStaff.Designer.cs">
+      <DependentUpon>SaddStaff.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Staff Screens\SaddUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Staff Screens\SaddUser.Designer.cs">
+      <DependentUpon>SaddUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin Screens\AddStaff.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin Screens\AddStaff.Designer.cs">
+      <DependentUpon>AddStaff.cs</DependentUpon>
+    </Compile>
+    <Compile Include="balance.cs">
+      <DependentUpon>NewFlavaGymn.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\loginDAL.cs" />
+    <Compile Include="DAL\userDAL.cs" />
+    <Compile Include="DashBoards\adminDashBoard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DashBoards\adminDashBoard.Designer.cs">
+      <DependentUpon>adminDashBoard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BlogicLayer\Datetime.cs" />
+    <Compile Include="BlogicLayer\loginBLL.cs" />
+    <Compile Include="BlogicLayer\userBLL.cs" />
+    <Compile Include="DashBoards\userDashBoard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DashBoards\userDashBoard.Designer.cs">
+      <DependentUpon>userDashBoard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="instructor.cs">
+      <DependentUpon>NewFlavaGymn.tt</DependentUpon>
+    </Compile>
+    <Compile Include="transactionDatail.cs">
+      <DependentUpon>NewFlavaGymn.tt</DependentUpon>
+    </Compile>
+    <Compile Include="transactionSummary.cs">
+      <DependentUpon>NewFlavaGymn.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Admin Screens\Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin Screens\Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NewFlavaGymn.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>NewFlavaGymn.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="NewFlavaGymn.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>NewFlavaGymn.tt</DependentUpon>
+    </Compile>
+    <Compile Include="NewFlavaGymn.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>NewFlavaGymn.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="payment.cs">
+      <DependentUpon>NewFlavaGymn.tt</DependentUpon>
+    </Compile>
+    <Compile Include="paymentType.cs">
+      <DependentUpon>NewFlavaGymn.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="salary.cs">
+      <DependentUpon>NewFlavaGymn.tt</DependentUpon>
+    </Compile>
+    <Compile Include="selectRole.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="selectRole.Designer.cs">
+      <DependentUpon>selectRole.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin Screens\addUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin Screens\addUser.Designer.cs">
+      <DependentUpon>addUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="specialization.cs">
+      <DependentUpon>NewFlavaGymn.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sp_helpdiagramdefinition_Result.cs">
+      <DependentUpon>NewFlavaGymn.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sp_helpdiagrams_Result.cs">
+      <DependentUpon>NewFlavaGymn.tt</DependentUpon>
+    </Compile>
+    <Compile Include="subscription.cs">
+      <DependentUpon>NewFlavaGymn.tt</DependentUpon>
+    </Compile>
+    <Compile Include="subscriptionStatu.cs">
+      <DependentUpon>NewFlavaGymn.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sysdiagram.cs">
+      <DependentUpon>NewFlavaGymn.tt</DependentUpon>
+    </Compile>
+    <Compile Include="user.cs">
+      <DependentUpon>NewFlavaGymn.tt</DependentUpon>
+    </Compile>
+    <Compile Include="viewStaffStatus.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="viewStaffStatus.Designer.cs">
+      <DependentUpon>viewStaffStatus.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Staff Screens\SaddStaff.resx">
+      <DependentUpon>SaddStaff.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Staff Screens\SaddUser.resx">
+      <DependentUpon>SaddUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin Screens\AddStaff.resx">
+      <DependentUpon>AddStaff.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DashBoards\adminDashBoard.resx">
+      <DependentUpon>adminDashBoard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DashBoards\userDashBoard.resx">
+      <DependentUpon>userDashBoard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin Screens\Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="selectRole.resx">
+      <DependentUpon>selectRole.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin Screens\addUser.resx">
+      <DependentUpon>addUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="viewStaffStatus.resx">
+      <DependentUpon>viewStaffStatus.cs</DependentUpon>
+    </EmbeddedResource>
+    <EntityDeploy Include="NewFlavaGymn.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>NewFlavaGymn.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="NewFlavaGymn.edmx.diagram">
+      <DependentUpon>NewFlavaGymn.edmx</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="images\icons8-close-button-100.png" />
+    <Content Include="NewFlavaGymn.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>NewFlavaGymn.edmx</DependentUpon>
+      <LastGenOutput>NewFlavaGymn.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="NewFlavaGymn.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>NewFlavaGymn.edmx</DependentUpon>
+      <LastGenOutput>NewFlavaGymn.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="System\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
