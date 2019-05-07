@@ -36,15 +36,16 @@
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.linkLabel2 = new System.Windows.Forms.LinkLabel();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnSignup = new System.Windows.Forms.Button();
             this.chbRemember = new System.Windows.Forms.CheckBox();
             this.lblUserLoginType = new System.Windows.Forms.Label();
             this.cbUserType = new System.Windows.Forms.ComboBox();
             this.pbClose = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.button1 = new System.Windows.Forms.Button();
             this.tableLayoutPanel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pbClose)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbClose)).BeginInit();
             this.SuspendLayout();
             // 
             // lblUsername
@@ -150,6 +151,15 @@
             this.tableLayoutPanel1.TabIndex = 6;
             this.tableLayoutPanel1.TabStop = true;
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.Color.CornflowerBlue;
+            this.pictureBox1.Location = new System.Drawing.Point(7, 7);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(671, 53);
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
+            // 
             // btnSignup
             // 
             this.btnSignup.BackColor = System.Drawing.Color.Lime;
@@ -210,14 +220,15 @@
             this.pbClose.TabStop = false;
             this.pbClose.Click += new System.EventHandler(this.PbClose_Click);
             // 
-            // pictureBox1
+            // button1
             // 
-            this.pictureBox1.BackColor = System.Drawing.Color.CornflowerBlue;
-            this.pictureBox1.Location = new System.Drawing.Point(7, 7);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(671, 53);
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
+            this.button1.Location = new System.Drawing.Point(115, 461);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 11;
+            this.button1.Text = "button1";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.Button1_Click);
             // 
             // Login
             // 
@@ -226,6 +237,7 @@
             this.AutoSize = true;
             this.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.ClientSize = new System.Drawing.Size(1820, 655);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.pbClose);
             this.Controls.Add(this.cbUserType);
             this.Controls.Add(this.chbRemember);
@@ -244,8 +256,8 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Login";
             this.tableLayoutPanel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pbClose)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbClose)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -267,5 +279,6 @@
         private System.Windows.Forms.Label lblUserLoginType;
         private System.Windows.Forms.ComboBox cbUserType;
         private System.Windows.Forms.PictureBox pbClose;
+        private System.Windows.Forms.Button button1;
     }
 }

@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SaddUser));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SaddUser));
             this.lblFirstname = new System.Windows.Forms.Label();
             this.lblLastname = new System.Windows.Forms.Label();
             this.lblEmailaddress = new System.Windows.Forms.Label();
@@ -41,7 +41,6 @@
             this.lblUserType = new System.Windows.Forms.Label();
             this.lblUsername = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.tbFirstName = new System.Windows.Forms.TextBox();
@@ -56,7 +55,6 @@
             this.btnCancel = new System.Windows.Forms.Button();
             this.btnClear = new System.Windows.Forms.Button();
             this.cbGender = new System.Windows.Forms.ComboBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.btnBrowse = new System.Windows.Forms.Button();
             this.dgvAdduser = new System.Windows.Forms.DataGridView();
             this.btnUpdate = new System.Windows.Forms.Button();
@@ -73,11 +71,13 @@
             this.lblSearch = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.tbaddUserId = new System.Windows.Forms.TextBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAdduser)).BeginInit();
             this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // lblFirstname
@@ -85,7 +85,7 @@
             this.lblFirstname.AutoSize = true;
             this.lblFirstname.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblFirstname.ForeColor = System.Drawing.Color.Gray;
-            this.lblFirstname.Location = new System.Drawing.Point(624, 69);
+            this.lblFirstname.Location = new System.Drawing.Point(624, 275);
             this.lblFirstname.Name = "lblFirstname";
             this.lblFirstname.Size = new System.Drawing.Size(85, 18);
             this.lblFirstname.TabIndex = 0;
@@ -96,7 +96,7 @@
             this.lblLastname.AutoSize = true;
             this.lblLastname.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblLastname.ForeColor = System.Drawing.Color.Gray;
-            this.lblLastname.Location = new System.Drawing.Point(624, 101);
+            this.lblLastname.Location = new System.Drawing.Point(624, 307);
             this.lblLastname.Name = "lblLastname";
             this.lblLastname.Size = new System.Drawing.Size(84, 18);
             this.lblLastname.TabIndex = 0;
@@ -107,7 +107,7 @@
             this.lblEmailaddress.AutoSize = true;
             this.lblEmailaddress.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblEmailaddress.ForeColor = System.Drawing.Color.Gray;
-            this.lblEmailaddress.Location = new System.Drawing.Point(625, 138);
+            this.lblEmailaddress.Location = new System.Drawing.Point(625, 344);
             this.lblEmailaddress.Name = "lblEmailaddress";
             this.lblEmailaddress.Size = new System.Drawing.Size(107, 18);
             this.lblEmailaddress.TabIndex = 0;
@@ -118,7 +118,7 @@
             this.lblTelephone.AutoSize = true;
             this.lblTelephone.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTelephone.ForeColor = System.Drawing.Color.Gray;
-            this.lblTelephone.Location = new System.Drawing.Point(624, 211);
+            this.lblTelephone.Location = new System.Drawing.Point(624, 417);
             this.lblTelephone.Name = "lblTelephone";
             this.lblTelephone.Size = new System.Drawing.Size(93, 18);
             this.lblTelephone.TabIndex = 0;
@@ -129,7 +129,7 @@
             this.lblGender.AutoSize = true;
             this.lblGender.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblGender.ForeColor = System.Drawing.Color.Gray;
-            this.lblGender.Location = new System.Drawing.Point(625, 175);
+            this.lblGender.Location = new System.Drawing.Point(625, 381);
             this.lblGender.Name = "lblGender";
             this.lblGender.Size = new System.Drawing.Size(61, 18);
             this.lblGender.TabIndex = 0;
@@ -140,7 +140,7 @@
             this.lblActivity.AutoSize = true;
             this.lblActivity.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblActivity.ForeColor = System.Drawing.Color.Gray;
-            this.lblActivity.Location = new System.Drawing.Point(625, 243);
+            this.lblActivity.Location = new System.Drawing.Point(625, 449);
             this.lblActivity.Name = "lblActivity";
             this.lblActivity.Size = new System.Drawing.Size(57, 18);
             this.lblActivity.TabIndex = 0;
@@ -151,7 +151,7 @@
             this.lblDOB.AutoSize = true;
             this.lblDOB.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDOB.ForeColor = System.Drawing.Color.Gray;
-            this.lblDOB.Location = new System.Drawing.Point(1097, 274);
+            this.lblDOB.Location = new System.Drawing.Point(1097, 480);
             this.lblDOB.Name = "lblDOB";
             this.lblDOB.Size = new System.Drawing.Size(94, 18);
             this.lblDOB.TabIndex = 0;
@@ -162,7 +162,7 @@
             this.lblSubscription.AutoSize = true;
             this.lblSubscription.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblSubscription.ForeColor = System.Drawing.Color.Gray;
-            this.lblSubscription.Location = new System.Drawing.Point(1097, 304);
+            this.lblSubscription.Location = new System.Drawing.Point(1097, 510);
             this.lblSubscription.Name = "lblSubscription";
             this.lblSubscription.Size = new System.Drawing.Size(94, 18);
             this.lblSubscription.TabIndex = 0;
@@ -173,7 +173,7 @@
             this.lblUserType.AutoSize = true;
             this.lblUserType.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblUserType.ForeColor = System.Drawing.Color.Gray;
-            this.lblUserType.Location = new System.Drawing.Point(625, 344);
+            this.lblUserType.Location = new System.Drawing.Point(625, 550);
             this.lblUserType.Name = "lblUserType";
             this.lblUserType.Size = new System.Drawing.Size(76, 18);
             this.lblUserType.TabIndex = 0;
@@ -184,7 +184,7 @@
             this.lblUsername.AutoSize = true;
             this.lblUsername.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblUsername.ForeColor = System.Drawing.Color.Gray;
-            this.lblUsername.Location = new System.Drawing.Point(625, 276);
+            this.lblUsername.Location = new System.Drawing.Point(625, 482);
             this.lblUsername.Name = "lblUsername";
             this.lblUsername.Size = new System.Drawing.Size(81, 18);
             this.lblUsername.TabIndex = 0;
@@ -199,18 +199,8 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(335, 781);
+            this.panel1.Size = new System.Drawing.Size(335, 975);
             this.panel1.TabIndex = 1;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(21, 26);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(305, 283);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 3;
-            this.pictureBox1.TabStop = false;
             // 
             // tableLayoutPanel1
             // 
@@ -238,7 +228,7 @@
             // tbFirstName
             // 
             this.tbFirstName.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbFirstName.Location = new System.Drawing.Point(742, 60);
+            this.tbFirstName.Location = new System.Drawing.Point(742, 266);
             this.tbFirstName.Multiline = true;
             this.tbFirstName.Name = "tbFirstName";
             this.tbFirstName.Size = new System.Drawing.Size(187, 24);
@@ -247,7 +237,7 @@
             // tbUsername
             // 
             this.tbUsername.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbUsername.Location = new System.Drawing.Point(743, 271);
+            this.tbUsername.Location = new System.Drawing.Point(743, 477);
             this.tbUsername.Multiline = true;
             this.tbUsername.Name = "tbUsername";
             this.tbUsername.Size = new System.Drawing.Size(187, 24);
@@ -256,7 +246,7 @@
             // tbTelephone
             // 
             this.tbTelephone.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbTelephone.Location = new System.Drawing.Point(743, 201);
+            this.tbTelephone.Location = new System.Drawing.Point(743, 407);
             this.tbTelephone.Multiline = true;
             this.tbTelephone.Name = "tbTelephone";
             this.tbTelephone.Size = new System.Drawing.Size(187, 24);
@@ -265,7 +255,7 @@
             // tbLastName
             // 
             this.tbLastName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbLastName.Location = new System.Drawing.Point(741, 95);
+            this.tbLastName.Location = new System.Drawing.Point(741, 301);
             this.tbLastName.Multiline = true;
             this.tbLastName.Name = "tbLastName";
             this.tbLastName.Size = new System.Drawing.Size(187, 24);
@@ -274,7 +264,7 @@
             // tbEmail
             // 
             this.tbEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbEmail.Location = new System.Drawing.Point(741, 130);
+            this.tbEmail.Location = new System.Drawing.Point(741, 336);
             this.tbEmail.Multiline = true;
             this.tbEmail.Name = "tbEmail";
             this.tbEmail.Size = new System.Drawing.Size(187, 24);
@@ -285,7 +275,7 @@
             this.dpDOB.CalendarForeColor = System.Drawing.Color.CornflowerBlue;
             this.dpDOB.CustomFormat = "dd/MM/YYYY";
             this.dpDOB.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dpDOB.Location = new System.Drawing.Point(1220, 269);
+            this.dpDOB.Location = new System.Drawing.Point(1220, 475);
             this.dpDOB.Name = "dpDOB";
             this.dpDOB.Size = new System.Drawing.Size(188, 24);
             this.dpDOB.TabIndex = 11;
@@ -300,7 +290,7 @@
             "Fortnightly",
             "Bi-Anually",
             "Anually"});
-            this.cbSubscription.Location = new System.Drawing.Point(1220, 303);
+            this.cbSubscription.Location = new System.Drawing.Point(1220, 509);
             this.cbSubscription.Name = "cbSubscription";
             this.cbSubscription.Size = new System.Drawing.Size(188, 26);
             this.cbSubscription.TabIndex = 12;
@@ -312,7 +302,7 @@
             this.cbUserType.FormattingEnabled = true;
             this.cbUserType.Items.AddRange(new object[] {
             "Member"});
-            this.cbUserType.Location = new System.Drawing.Point(743, 337);
+            this.cbUserType.Location = new System.Drawing.Point(743, 543);
             this.cbUserType.MaxDropDownItems = 10;
             this.cbUserType.Name = "cbUserType";
             this.cbUserType.Size = new System.Drawing.Size(186, 26);
@@ -365,23 +355,14 @@
             this.cbGender.Items.AddRange(new object[] {
             "Male",
             "Female"});
-            this.cbGender.Location = new System.Drawing.Point(741, 165);
+            this.cbGender.Location = new System.Drawing.Point(741, 371);
             this.cbGender.Name = "cbGender";
             this.cbGender.Size = new System.Drawing.Size(186, 26);
             this.cbGender.TabIndex = 4;
             // 
-            // pictureBox2
-            // 
-            this.pictureBox2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pictureBox2.Location = new System.Drawing.Point(1220, 76);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(188, 153);
-            this.pictureBox2.TabIndex = 11;
-            this.pictureBox2.TabStop = false;
-            // 
             // btnBrowse
             // 
-            this.btnBrowse.Location = new System.Drawing.Point(1281, 234);
+            this.btnBrowse.Location = new System.Drawing.Point(1281, 440);
             this.btnBrowse.Name = "btnBrowse";
             this.btnBrowse.Size = new System.Drawing.Size(75, 23);
             this.btnBrowse.TabIndex = 12;
@@ -396,9 +377,9 @@
             this.dgvAdduser.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvAdduser.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
             this.dgvAdduser.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvAdduser.Location = new System.Drawing.Point(341, 418);
+            this.dgvAdduser.Location = new System.Drawing.Point(341, 624);
             this.dgvAdduser.Name = "dgvAdduser";
-            this.dgvAdduser.Size = new System.Drawing.Size(1459, 223);
+            this.dgvAdduser.Size = new System.Drawing.Size(1458, 223);
             this.dgvAdduser.TabIndex = 13;
             this.dgvAdduser.RowHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.DgvAdduser_RowHeaderMouseClick);
             // 
@@ -433,7 +414,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Gray;
-            this.label1.Location = new System.Drawing.Point(1097, 343);
+            this.label1.Location = new System.Drawing.Point(1097, 549);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(100, 18);
             this.label1.TabIndex = 0;
@@ -446,7 +427,7 @@
             this.cbSubscriptionStatus.Items.AddRange(new object[] {
             "Active",
             "Inactive"});
-            this.cbSubscriptionStatus.Location = new System.Drawing.Point(1220, 340);
+            this.cbSubscriptionStatus.Location = new System.Drawing.Point(1220, 546);
             this.cbSubscriptionStatus.Name = "cbSubscriptionStatus";
             this.cbSubscriptionStatus.Size = new System.Drawing.Size(188, 26);
             this.cbSubscriptionStatus.TabIndex = 13;
@@ -458,7 +439,7 @@
             this.panel2.Controls.Add(this.btnSave);
             this.panel2.Controls.Add(this.btnClear);
             this.panel2.Controls.Add(this.btnCancel);
-            this.panel2.Location = new System.Drawing.Point(1018, 647);
+            this.panel2.Location = new System.Drawing.Point(1018, 853);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(186, 122);
             this.panel2.TabIndex = 15;
@@ -468,7 +449,7 @@
             this.lblAddress.AutoSize = true;
             this.lblAddress.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblAddress.ForeColor = System.Drawing.Color.Gray;
-            this.lblAddress.Location = new System.Drawing.Point(624, 374);
+            this.lblAddress.Location = new System.Drawing.Point(624, 580);
             this.lblAddress.Name = "lblAddress";
             this.lblAddress.Size = new System.Drawing.Size(62, 18);
             this.lblAddress.TabIndex = 0;
@@ -477,7 +458,7 @@
             // tbAddress
             // 
             this.tbAddress.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbAddress.Location = new System.Drawing.Point(743, 370);
+            this.tbAddress.Location = new System.Drawing.Point(743, 576);
             this.tbAddress.Multiline = true;
             this.tbAddress.Name = "tbAddress";
             this.tbAddress.Size = new System.Drawing.Size(187, 25);
@@ -488,7 +469,7 @@
             this.lblpassword1.AutoSize = true;
             this.lblpassword1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblpassword1.ForeColor = System.Drawing.Color.Gray;
-            this.lblpassword1.Location = new System.Drawing.Point(625, 311);
+            this.lblpassword1.Location = new System.Drawing.Point(625, 517);
             this.lblpassword1.Name = "lblpassword1";
             this.lblpassword1.Size = new System.Drawing.Size(79, 18);
             this.lblpassword1.TabIndex = 0;
@@ -497,7 +478,7 @@
             // tbPassword
             // 
             this.tbPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbPassword.Location = new System.Drawing.Point(743, 305);
+            this.tbPassword.Location = new System.Drawing.Point(743, 511);
             this.tbPassword.Multiline = true;
             this.tbPassword.Name = "tbPassword";
             this.tbPassword.ReadOnly = true;
@@ -515,7 +496,7 @@
             "Weight Lifting",
             "Jogging",
             "Walking"});
-            this.cbActivity.Location = new System.Drawing.Point(743, 235);
+            this.cbActivity.Location = new System.Drawing.Point(743, 441);
             this.cbActivity.MaxDropDownItems = 7;
             this.cbActivity.Name = "cbActivity";
             this.cbActivity.Size = new System.Drawing.Size(186, 26);
@@ -524,7 +505,7 @@
             // tbSearch
             // 
             this.tbSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbSearch.Location = new System.Drawing.Point(1030, 20);
+            this.tbSearch.Location = new System.Drawing.Point(1030, 226);
             this.tbSearch.Multiline = true;
             this.tbSearch.Name = "tbSearch";
             this.tbSearch.Size = new System.Drawing.Size(390, 24);
@@ -536,7 +517,7 @@
             this.lblSearch.AutoSize = true;
             this.lblSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblSearch.ForeColor = System.Drawing.Color.Gray;
-            this.lblSearch.Location = new System.Drawing.Point(953, 26);
+            this.lblSearch.Location = new System.Drawing.Point(953, 232);
             this.lblSearch.Name = "lblSearch";
             this.lblSearch.Size = new System.Drawing.Size(59, 18);
             this.lblSearch.TabIndex = 0;
@@ -547,7 +528,7 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.Gray;
-            this.label2.Location = new System.Drawing.Point(625, 32);
+            this.label2.Location = new System.Drawing.Point(625, 238);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(23, 18);
             this.label2.TabIndex = 0;
@@ -556,19 +537,38 @@
             // tbaddUserId
             // 
             this.tbaddUserId.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbaddUserId.Location = new System.Drawing.Point(741, 26);
+            this.tbaddUserId.Location = new System.Drawing.Point(741, 232);
             this.tbaddUserId.Multiline = true;
             this.tbaddUserId.Name = "tbaddUserId";
             this.tbaddUserId.ReadOnly = true;
             this.tbaddUserId.Size = new System.Drawing.Size(187, 24);
             this.tbaddUserId.TabIndex = 1;
             // 
+            // pictureBox2
+            // 
+            this.pictureBox2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pictureBox2.Location = new System.Drawing.Point(1220, 282);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(188, 153);
+            this.pictureBox2.TabIndex = 11;
+            this.pictureBox2.TabStop = false;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(21, 26);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(305, 283);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 3;
+            this.pictureBox1.TabStop = false;
+            // 
             // SaddUser
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
-            this.ClientSize = new System.Drawing.Size(1812, 781);
+            this.ClientSize = new System.Drawing.Size(1812, 580);
             this.Controls.Add(this.cbActivity);
             this.Controls.Add(this.tbAddress);
             this.Controls.Add(this.cbSubscriptionStatus);
@@ -612,10 +612,10 @@
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.Signup_Load);
             this.panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAdduser)).EndInit();
             this.panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

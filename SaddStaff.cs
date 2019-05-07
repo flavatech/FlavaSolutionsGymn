@@ -14,17 +14,18 @@ using System.Windows.Forms;
 
 namespace FlavaGymn
 {
-    public partial class AddStaff : Form
+    public partial class SaddStaff : Form
     {
-        public AddStaff()
+        public SaddStaff()
         {
             InitializeComponent();
         }
-        userBLL u = new userBLL();
-        userDAL d = new userDAL();
+
+        readonly userBLL u = new userBLL();
+        readonly userDAL d = new userDAL();
         private void Signup_Load(object sender, EventArgs e)
         {
-            DataTable dt = d.Select();
+            DataTable dt = d.SelectS();
             dgvAdduser.DataSource = dt;
         }
 
@@ -73,7 +74,7 @@ namespace FlavaGymn
             }
             Clear();
             //refresh the datagrid view
-            DataTable dt = d.Select();
+            DataTable dt = d.SelectS();
             dgvAdduser.DataSource = dt;
 
         }
@@ -92,7 +93,6 @@ namespace FlavaGymn
         //Create a Global method for Clear
         private void Clear()
         {
-            //Use Var to  enable use of user friendly names in clear command below.
             //Use Var to  enable use of user friendly names in clear command below.
             var FirstName = tbFirstName;
             var LastName = tbLastName;
@@ -131,7 +131,6 @@ namespace FlavaGymn
         private void DgvAdduser_RowHeaderMouseClick(object sender, DataGridViewCellMouseEventArgs e)
         {
             //get the index of the particular row
-            //get the index of the particular row
             int rowIndex = e.RowIndex;
             tbaddUserId.Text = dgvAdduser.Rows[rowIndex].Cells[0].Value.ToString();
             tbFirstName.Text = dgvAdduser.Rows[rowIndex].Cells[1].Value.ToString();
@@ -150,9 +149,9 @@ namespace FlavaGymn
             cbSubscription.Text = dgvAdduser.Rows[rowIndex].Cells[14].Value.ToString();
             cbSubscriptionStatus.Text = dgvAdduser.Rows[rowIndex].Cells[15].Value.ToString();
         }
-
         private void BtnUpdate_Click(object sender, EventArgs e)
-        {//Get the Values From User Interface
+        {
+            //Get the Values From User Interface
 
             u.id = Convert.ToInt32(tbaddUserId.Text);
             u.firstName = tbFirstName.Text;
@@ -187,7 +186,7 @@ namespace FlavaGymn
                 MessageBox.Show("Failed to update User");
             }
             //Referesh DataGrid View
-            DataTable dt = d.Select();
+            DataTable dt = d.SelectS();
             dgvAdduser.DataSource = dt;
         }
 
@@ -207,7 +206,7 @@ namespace FlavaGymn
                 MessageBox.Show("Failed to delete user");
             }
             //Referesh DataGrid View
-            DataTable dt = d.Select();
+            DataTable dt = d.SelectS();
             dgvAdduser.DataSource = dt;
             Clear();
         }
@@ -227,36 +226,10 @@ namespace FlavaGymn
             else
             {
                 //Show all users in database
-                DataTable dt = d.Select();
+                DataTable dt = d.SelectS();
                 dgvAdduser.DataSource = dt;
             }
         }
-
-        private void Button2_Click(object sender, EventArgs e)
-        {
-            try
-                {
-                    MailMessage mail = new MailMessage();
-                    SmtpClient SmtpServer = new SmtpClient("smtp.gmail.com");
-
-                    mail.From = new MailAddress("flavatech@gmail.com");
-                    mail.To.Add("emailAddress");
-                    mail.Subject = "password";
-                    mail.Body = "This is for testing SMTP mail from GMAIL";
-
-                    SmtpServer.Port = 587;
-                    SmtpServer.Credentials = new System.Net.NetworkCredential("gcfostercollege0@gmail.com", "Fclaude1980*");
-                    SmtpServer.EnableSsl = true;
-
-                    SmtpServer.Send(mail);
-                    MessageBox.Show("mail Send");
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show(ex.ToString());
-                }
-            }
-        }
     }
-
+}
 

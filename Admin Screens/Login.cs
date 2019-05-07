@@ -56,7 +56,7 @@ namespace FlavaGymn
                 //open respective dashboard based on user type
                 if (success == true)
                 {
-                    
+
                     loggedIn = username;
                     //Open the forms based on the usertype selected
                     switch (l.userType)
@@ -96,13 +96,20 @@ namespace FlavaGymn
         }
         private void BtnSignup_Click(object sender, EventArgs e)
         {
-            selectRole Form = new selectRole();
+            CreateAccount Form = new CreateAccount();
             Form.Show();
         }
         private void PbClose_Click(object sender, EventArgs e)
         {
             //Close the form
             this.Close();
+        }
+
+        private void Button1_Click(object sender, EventArgs e)
+        {
+            AddUser21 admin21 = new AddUser21();
+            admin21.Show();
+            
         }
     }
 }

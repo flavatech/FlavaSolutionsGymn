@@ -56,11 +56,23 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Staff Screens\SaddStaff.cs">
+    <Compile Include="AddUser21.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Staff Screens\SaddStaff.Designer.cs">
+    <Compile Include="AddUser21.Designer.cs">
+      <DependentUpon>AddUser21.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SaddStaff.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SaddStaff.Designer.cs">
       <DependentUpon>SaddStaff.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CreateAccount.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CreateAccount.Designer.cs">
+      <DependentUpon>CreateAccount.cs</DependentUpon>
     </Compile>
     <Compile Include="Staff Screens\SaddUser.cs">
       <SubType>Form</SubType>
@@ -168,8 +180,14 @@
     <Compile Include="user.cs">
       <DependentUpon>NewFlavaGymn.tt</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Staff Screens\SaddStaff.resx">
+    <EmbeddedResource Include="AddUser21.resx">
+      <DependentUpon>AddUser21.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SaddStaff.resx">
       <DependentUpon>SaddStaff.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CreateAccount.resx">
+      <DependentUpon>CreateAccount.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Staff Screens\SaddUser.resx">
       <DependentUpon>SaddUser.cs</DependentUpon>
@@ -241,6 +259,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="System\" />
+    <Folder Include="User Screens\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

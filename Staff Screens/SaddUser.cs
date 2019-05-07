@@ -25,7 +25,7 @@ namespace FlavaGymn
         readonly userDAL d = new userDAL();
         private void Signup_Load(object sender, EventArgs e)
         {
-            DataTable dt = d.Select();
+            DataTable dt = d.SelectM();
             dgvAdduser.DataSource = dt;
         }
 
@@ -74,7 +74,7 @@ namespace FlavaGymn
             }
             Clear();
             //refresh the datagrid view
-            DataTable dt = d.Select();
+            DataTable dt = d.SelectM();
             dgvAdduser.DataSource = dt;
 
         }
@@ -186,7 +186,7 @@ namespace FlavaGymn
                 MessageBox.Show("Failed to update User");
             }
             //Referesh DataGrid View
-            DataTable dt = d.Select();
+            DataTable dt = d.SelectM();
             dgvAdduser.DataSource = dt;
         }
 
@@ -206,7 +206,7 @@ namespace FlavaGymn
                 MessageBox.Show("Failed to delete user");
             }
             //Referesh DataGrid View
-            DataTable dt = d.Select();
+            DataTable dt = d.SelectM();
             dgvAdduser.DataSource = dt;
             Clear();
         }
@@ -226,7 +226,7 @@ namespace FlavaGymn
             else
             {
                 //Show all users in database
-                DataTable dt = d.Select();
+                DataTable dt = d.SelectM();
                 dgvAdduser.DataSource = dt;
             }
         }

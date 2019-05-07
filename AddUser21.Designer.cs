@@ -1,6 +1,6 @@
 ﻿namespace FlavaGymn
 {
-    partial class AddStaff
+    partial class AddUser21
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AddStaff));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AddUser21));
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.lblFirstname = new System.Windows.Forms.Label();
             this.lblLastname = new System.Windows.Forms.Label();
             this.lblEmailaddress = new System.Windows.Forms.Label();
@@ -55,6 +56,7 @@
             this.btnCancel = new System.Windows.Forms.Button();
             this.btnClear = new System.Windows.Forms.Button();
             this.cbGender = new System.Windows.Forms.ComboBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.btnBrowse = new System.Windows.Forms.Button();
             this.dgvAdduser = new System.Windows.Forms.DataGridView();
             this.btnUpdate = new System.Windows.Forms.Button();
@@ -71,14 +73,11 @@
             this.lblSearch = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.tbaddUserId = new System.Windows.Forms.TextBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAdduser)).BeginInit();
             this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // lblFirstname
@@ -200,7 +199,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(335, 857);
+            this.panel1.Size = new System.Drawing.Size(335, 781);
             this.panel1.TabIndex = 1;
             // 
             // pictureBox1
@@ -312,8 +311,7 @@
             this.cbUserType.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbUserType.FormattingEnabled = true;
             this.cbUserType.Items.AddRange(new object[] {
-            "Instructor",
-            "Staff"});
+            "Member"});
             this.cbUserType.Location = new System.Drawing.Point(743, 337);
             this.cbUserType.MaxDropDownItems = 10;
             this.cbUserType.Name = "cbUserType";
@@ -372,6 +370,15 @@
             this.cbGender.Size = new System.Drawing.Size(186, 26);
             this.cbGender.TabIndex = 4;
             // 
+            // pictureBox2
+            // 
+            this.pictureBox2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pictureBox2.Location = new System.Drawing.Point(1220, 76);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(188, 153);
+            this.pictureBox2.TabIndex = 11;
+            this.pictureBox2.TabStop = false;
+            // 
             // btnBrowse
             // 
             this.btnBrowse.Location = new System.Drawing.Point(1281, 234);
@@ -383,11 +390,15 @@
             // 
             // dgvAdduser
             // 
+            dataGridViewCellStyle1.Format = "D";
+            dataGridViewCellStyle1.NullValue = null;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvAdduser.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvAdduser.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
             this.dgvAdduser.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvAdduser.Location = new System.Drawing.Point(341, 418);
             this.dgvAdduser.Name = "dgvAdduser";
-            this.dgvAdduser.Size = new System.Drawing.Size(1459, 283);
+            this.dgvAdduser.Size = new System.Drawing.Size(1459, 223);
             this.dgvAdduser.TabIndex = 13;
             this.dgvAdduser.RowHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.DgvAdduser_RowHeaderMouseClick);
             // 
@@ -447,7 +458,7 @@
             this.panel2.Controls.Add(this.btnSave);
             this.panel2.Controls.Add(this.btnClear);
             this.panel2.Controls.Add(this.btnCancel);
-            this.panel2.Location = new System.Drawing.Point(1020, 707);
+            this.panel2.Location = new System.Drawing.Point(1018, 647);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(186, 122);
             this.panel2.TabIndex = 15;
@@ -485,15 +496,14 @@
             // 
             // tbPassword
             // 
-            this.tbPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbPassword.ForeColor = System.Drawing.SystemColors.ActiveCaption;
+            this.tbPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbPassword.Location = new System.Drawing.Point(743, 305);
             this.tbPassword.Multiline = true;
             this.tbPassword.Name = "tbPassword";
             this.tbPassword.ReadOnly = true;
             this.tbPassword.Size = new System.Drawing.Size(187, 24);
             this.tbPassword.TabIndex = 9;
-            this.tbPassword.Text = "Automatically generated";
+            this.tbPassword.Visible = false;
             // 
             // cbActivity
             // 
@@ -553,44 +563,12 @@
             this.tbaddUserId.Size = new System.Drawing.Size(187, 24);
             this.tbaddUserId.TabIndex = 1;
             // 
-            // pictureBox2
-            // 
-            this.pictureBox2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pictureBox2.Location = new System.Drawing.Point(1220, 76);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(188, 153);
-            this.pictureBox2.TabIndex = 11;
-            this.pictureBox2.TabStop = false;
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(0, 0);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 18;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
-            // 
-            // button2
-            // 
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button2.Image = ((System.Drawing.Image)(resources.GetObject("button2.Image")));
-            this.button2.Location = new System.Drawing.Point(1119, 374);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(92, 38);
-            this.button2.TabIndex = 19;
-            this.button2.Text = "button2";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.Button2_Click);
-            // 
-            // AddStaff
+            // AddUser21
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
-            this.ClientSize = new System.Drawing.Size(1812, 857);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.ClientSize = new System.Drawing.Size(1812, 781);
             this.Controls.Add(this.cbActivity);
             this.Controls.Add(this.tbAddress);
             this.Controls.Add(this.cbSubscriptionStatus);
@@ -628,16 +606,16 @@
             this.Controls.Add(this.panel2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.HelpButton = true;
-            this.Name = "AddStaff";
+            this.Name = "AddUser21";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Signup";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.Signup_Load);
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAdduser)).EndInit();
             this.panel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -699,7 +677,5 @@
         private System.Windows.Forms.Label lblSearch;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox tbaddUserId;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
     }
 }

@@ -45,6 +45,73 @@ namespace FlavaGymn.DAL
             return dt;
         }
         #endregion
+        #region SELECT MEMBERS and STAFF ONLY
+
+        public DataTable SelectS()
+        {
+            //Method to connect to database
+            SqlConnection conn = new SqlConnection(myconnstrng);
+            //This is used to hold data from the database
+            DataTable dt = new DataTable();
+            try
+            {
+                //Query to get the data from the dtabase
+                String sql = ("SELECT * FROM users WHERE(userType LIKE 'Staff')");
+                SqlCommand cmd = new SqlCommand(sql, conn);
+                SqlDataAdapter adapter = new SqlDataAdapter(cmd);
+                //Open database connection
+                conn.Open();
+                //fill data in the datatable
+                adapter.Fill(dt);
+            }
+            catch (Exception ex)
+            {
+                //Show error message for any messages that might occur
+                MessageBox.Show(ex.Message);
+            }
+            finally
+            {
+                //Close Connection
+                conn.Close();
+            }
+            return dt;
+        }
+        #endregion
+
+        #region Select Members from database
+
+        public DataTable SelectM()
+        {
+            //Method to connect to database
+            SqlConnection conn = new SqlConnection(myconnstrng);
+            //This is used to hold data from the database
+            DataTable dt = new DataTable();
+            try
+            {
+                //Query to get the data from the dtabase
+                String sql = ("SELECT * FROM users WHERE(userType LIKE 'Member')");
+
+                SqlCommand cmd = new SqlCommand(sql, conn);
+                SqlDataAdapter adapter = new SqlDataAdapter(cmd);
+                //Open database connection
+                conn.Open();
+                //fill data in the datatable
+                adapter.Fill(dt);
+            }
+            catch (Exception ex)
+            {
+                //Show error message for any messages that might occur
+                MessageBox.Show(ex.Message);
+            }
+            finally
+            {
+                //Close Connection
+                conn.Close();
+            }
+            return dt;
+        }
+
+        #endregion
         #region Insert the data into the database
         public bool Insert(DashBoards.BlogicLayer.userBLL u)
         {

@@ -41,5 +41,12 @@ namespace FlavaGymn
         {
             lblLoggegInUser.Text = Login.loggedIn;
         }
+
+        private void PictureBox4_Click(object sender, EventArgs e)
+        {
+            Form Login = new Login();
+            Login.Show();
+            this.Hide();
+        }
     }
 }
