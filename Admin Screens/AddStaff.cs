@@ -24,8 +24,8 @@ namespace FlavaGymn
         userDAL d = new userDAL();
         private void Signup_Load(object sender, EventArgs e)
         {
-            DataTable dtsi = d.SelectSI();
-            dgvAdduser.DataSource = dtsi;
+            DataTable dt = d.SelectSI();
+            dgvAdduser.DataSource = dt;
         }
 
         private void BtnSave_Click(object sender, EventArgs e)
@@ -73,8 +73,8 @@ namespace FlavaGymn
             }
             Clear();
             //refresh the datagrid view
-            DataTable dtsi = d.SelectSI();
-            dgvAdduser.DataSource = dtsi;
+            DataTable dt = d.SelectSI();
+            dgvAdduser.DataSource = dt;
 
         }
         private void BtnCancel_Click(object sender, EventArgs e)
@@ -188,8 +188,8 @@ namespace FlavaGymn
                 MessageBox.Show("Failed to update User");
             }
             //Referesh DataGrid View
-            DataTable dtsi = d.SelectSI();
-            dgvAdduser.DataSource = dtsi;
+            DataTable dt = d.SelectSI();
+            dgvAdduser.DataSource = dt;
         }
 
         private void BtnDelete_Click(object sender, EventArgs e)
@@ -208,8 +208,8 @@ namespace FlavaGymn
                 MessageBox.Show("Failed to delete user");
             }
             //Referesh DataGrid View
-            DataTable dtsi = d.SelectSI();
-            dgvAdduser.DataSource = dtsi;
+            DataTable dt = d.SelectSI();
+            dgvAdduser.DataSource = dt;
             Clear();
         }
 
@@ -222,14 +222,14 @@ namespace FlavaGymn
             if (keywords != null)
             {
                 //Show user based on keyword
-                DataTable dtsi = d.Search(keywords);
-                dgvAdduser.DataSource = dtsi;
+                DataTable dt = d.Search(keywords);
+                dgvAdduser.DataSource = dt;
             }
             else
             {
                 //Show all users in database
-                DataTable dtsi = d.SelectSI();
-                dgvAdduser.DataSource = dtsi;
+                DataTable dt = d.SelectSI();
+                dgvAdduser.DataSource = dt;
             }
         }
 

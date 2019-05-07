@@ -81,10 +81,6 @@ namespace FlavaGymn
 
         }
 
-        private void BtnClear_Click(object sender, EventArgs e)
-        {
-            Clear();
-        }
 
         //Create a Global method for Clear
         private void Clear()
@@ -181,9 +177,9 @@ namespace FlavaGymn
 
         }
 
-        private void TbSearch_TextChanged(object sender, EventArgs e)
+        private void BtnClear_Click(object sender, EventArgs e)
         {
-
+            Clear();
         }
     }
 }

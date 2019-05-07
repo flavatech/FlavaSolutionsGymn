@@ -47,7 +47,7 @@ namespace FlavaGymn.DAL
             return dt;
         } */
         #endregion
-        #region SELECT STAFF ONLY
+        #region SELECT STAFF ONLY(FOR SADDSTAFF INTERFACE)
 
         public DataTable SelectS()
         {
@@ -58,7 +58,7 @@ namespace FlavaGymn.DAL
             try
             {
                 //Query to get the data from the dtabase
-                String sql = ("SELECT id AS[User ID], userType AS[User Type], firstName AS[First Name], lastName AS[Last Name], emailAddress AS[Email Address], gender AS Gender, phoneNumber AS[Telephone #], activity AS Activity, userName AS Username,  password AS Password, address AS Address, dateOfBirth AS [Date of Birth], subscription AS Subscription, status AS Status, dateCreated AS [Date Created],FROM  users WHERE (userType = 'Staff')");
+                String sql = ("SELECT id AS[User ID], userType AS[User Type], firstName AS[First Name], lastName AS[Last Name], emailAddress AS[Email Address], gender AS Gender, phoneNumber AS[Telephone #], activity AS Activity, userName AS Username,  password AS Password, address AS Address, dateOfBirth AS [Date of Birth], subscription AS Subscription, status AS Status, dateCreated AS [Date Created], addedBy AS [Added By] FROM  users WHERE(userType = 'Staff')");
                 //String sql = ("SELECT * FROM users WHERE(userType LIKE 'Staff')");
                 SqlCommand cmd = new SqlCommand(sql, conn);
                 SqlDataAdapter adapter = new SqlDataAdapter(cmd);
@@ -81,7 +81,7 @@ namespace FlavaGymn.DAL
         }
         #endregion
 
-        #region SELECT STAFF AND INSTRUCTORS ONLY
+        #region SELECT STAFF AND INSTRUCTORS ONLY(FOR ADDSTAFF INTERFACE)
 
         public DataTable SelectSI()
         {
@@ -115,7 +115,7 @@ namespace FlavaGymn.DAL
         }
         #endregion
 
-        #region Select Members from database
+        #region Select Members Only from database
 
         public DataTable SelectM()
         {

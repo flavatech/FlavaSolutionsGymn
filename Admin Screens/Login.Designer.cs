@@ -42,7 +42,6 @@
             this.lblUserLoginType = new System.Windows.Forms.Label();
             this.cbUserType = new System.Windows.Forms.ComboBox();
             this.pbClose = new System.Windows.Forms.PictureBox();
-            this.button1 = new System.Windows.Forms.Button();
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbClose)).BeginInit();
@@ -220,16 +219,6 @@
             this.pbClose.TabStop = false;
             this.pbClose.Click += new System.EventHandler(this.PbClose_Click);
             // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(115, 461);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 11;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.Button1_Click);
-            // 
             // Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -237,7 +226,6 @@
             this.AutoSize = true;
             this.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.ClientSize = new System.Drawing.Size(1820, 655);
-            this.Controls.Add(this.button1);
             this.Controls.Add(this.pbClose);
             this.Controls.Add(this.cbUserType);
             this.Controls.Add(this.chbRemember);
@@ -279,6 +267,5 @@
         private System.Windows.Forms.Label lblUserLoginType;
         private System.Windows.Forms.ComboBox cbUserType;
         private System.Windows.Forms.PictureBox pbClose;
-        private System.Windows.Forms.Button button1;
     }
 }

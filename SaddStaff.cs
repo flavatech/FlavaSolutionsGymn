@@ -147,8 +147,8 @@ namespace FlavaGymn
             dpDOB.Text = dgvAdduser.Rows[rowIndex].Cells[11].Value.ToString();
             //dateCreated12
             //addedby13
-            cbSubscription.Text = dgvAdduser.Rows[rowIndex].Cells[14].Value.ToString();
-            cbSubscriptionStatus.Text = dgvAdduser.Rows[rowIndex].Cells[15].Value.ToString();
+            cbSubscription.Text = dgvAdduser.Rows[rowIndex].Cells[12].Value.ToString();
+            cbSubscriptionStatus.Text = dgvAdduser.Rows[rowIndex].Cells[13].Value.ToString();
         }
         private void BtnUpdate_Click(object sender, EventArgs e)
         {
