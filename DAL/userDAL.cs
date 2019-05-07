@@ -15,12 +15,14 @@ namespace FlavaGymn.DAL
     {
         static string myconnstrng = ConfigurationManager.ConnectionStrings["connstrng"].ConnectionString;
         #region Select Data from Database
+        /*
         public DataTable Select()
         {
             //Method to connect to database
             SqlConnection conn = new SqlConnection(myconnstrng);
             //This is used to hold data from the database
             DataTable dt = new DataTable();
+            DataTable dtsi = new DataTable();
             try
             {
                 //Query to get the data from the dtabase
@@ -43,9 +45,9 @@ namespace FlavaGymn.DAL
                 conn.Close();
             }
             return dt;
-        }
+        } */
         #endregion
-        #region SELECT MEMBERS and STAFF ONLY
+        #region SELECT STAFF ONLY
 
         public DataTable SelectS()
         {
@@ -56,7 +58,8 @@ namespace FlavaGymn.DAL
             try
             {
                 //Query to get the data from the dtabase
-                String sql = ("SELECT * FROM users WHERE(userType LIKE 'Staff')");
+                String sql = ("SELECT id AS[User ID], userType AS[User Type], firstName AS[First Name], lastName AS[Last Name], emailAddress AS[Email Address], gender AS Gender, phoneNumber AS[Telephone #], activity AS Activity, userName AS Username,  password AS Password, address AS Address, dateOfBirth AS [Date of Birth], subscription AS Subscription, status AS Status, dateCreated AS [Date Created],FROM  users WHERE (userType = 'Staff')");
+                //String sql = ("SELECT * FROM users WHERE(userType LIKE 'Staff')");
                 SqlCommand cmd = new SqlCommand(sql, conn);
                 SqlDataAdapter adapter = new SqlDataAdapter(cmd);
                 //Open database connection
@@ -78,6 +81,40 @@ namespace FlavaGymn.DAL
         }
         #endregion
 
+        #region SELECT STAFF AND INSTRUCTORS ONLY
+
+        public DataTable SelectSI()
+        {
+            //Method to connect to database
+            SqlConnection conn = new SqlConnection(myconnstrng);
+            //This is used to hold data from the database
+            DataTable dtsi = new DataTable();
+            try
+            {
+                //Query to get the data from the dtabase
+                String sql = ("SELECT id AS[User ID], userType AS[User Type], firstName AS[First Name], lastName AS[Last Name], emailAddress AS[Email Address], gender AS Gender, phoneNumber AS[Telephone #], activity AS Activity, userName AS Username,  password AS Password, address AS Address, dateOfBirth AS [Date of Birth], subscription AS Subscription, status AS Status, dateCreated AS [Date Created], addedBy AS [Added By] FROM  users WHERE(userType LIKE 'Staff') OR (userType LIKE 'Instructor')");
+                //String sql = ("SELECT * FROM users WHERE(userType LIKE 'Staff')");
+                SqlCommand cmd = new SqlCommand(sql, conn);
+                SqlDataAdapter adapter = new SqlDataAdapter(cmd);
+                //Open database connection
+                conn.Open();
+                //fill data in the datatable
+                adapter.Fill(dtsi);
+            }
+            catch (Exception ex)
+            {
+                //Show error message for any messages that might occur
+                MessageBox.Show(ex.Message);
+            }
+            finally
+            {
+                //Close Connection
+                conn.Close();
+            }
+            return dtsi;
+        }
+        #endregion
+
         #region Select Members from database
 
         public DataTable SelectM()
@@ -89,7 +126,7 @@ namespace FlavaGymn.DAL
             try
             {
                 //Query to get the data from the dtabase
-                String sql = ("SELECT * FROM users WHERE(userType LIKE 'Member')");
+                String sql = ("SELECT id AS[User ID], userType AS[User Type], firstName AS[First Name], lastName AS[Last Name], emailAddress AS[Email Address], gender AS Gender, phoneNumber AS[Telephone #], activity AS Activity, userName AS Username,  password AS Password, address AS Address, dateOfBirth AS [Date of Birth], subscription AS Subscription, status AS Status, dateCreated AS [Date Created], addedBy AS [Added By] FROM  users WHERE (userType = 'Member')");
 
                 SqlCommand cmd = new SqlCommand(sql, conn);
                 SqlDataAdapter adapter = new SqlDataAdapter(cmd);
@@ -251,17 +288,19 @@ namespace FlavaGymn.DAL
             //Method to connect to database
             SqlConnection conn = new SqlConnection(myconnstrng);
             //This is used to hold data from the database
-            DataTable dt = new DataTable();
+            DataTable dtsi = new DataTable();
             try
             {
+
                 //Query to get the data from the dtabase
-                String sql = "SELECT* FROM dbo.user WHERE id LIKE '%" + keyword + "%' OR firstName LIKE '%" + keyword + "%' OR lastName Like '%" + keyword + "%'OR username LIKE '%" + keyword + "%'";
+                String sql= "SELECT id AS[User ID], userType AS[User Type], firstName AS[First Name], lastName AS[Last Name], emailAddress AS[Email Address], gender AS Gender, phoneNumber AS[Telephone #], activity AS Activity, userName AS Username,  password AS Password, address AS Address, dateOfBirth AS [Date of Birth], subscription AS Subscription, status AS Status, dateCreated AS [Date Created], addedBy AS [Added By] FROM  users WHERE (UserType = 'Staff' OR UserType ='Instructor') AND id LIKE '%" + keyword + "%' OR firstName LIKE '%" + keyword + "%' OR lastName Like '%" + keyword + "%'OR username LIKE '%" + keyword + "%'";
+                //String sql = "SELECT*FROM dbo.users WHERE  id LIKE '%" + keyword + "%' OR firstName LIKE '%" + keyword + "%' OR lastName Like '%" + keyword + "%'OR username LIKE '%" + keyword + "%'";
                 SqlCommand cmd = new SqlCommand(sql, conn);
                 SqlDataAdapter adapter = new SqlDataAdapter(cmd);
                 //Open database connection
                 conn.Open();
                 //fill data in the datatable
-                adapter.Fill(dt);
+                adapter.Fill(dtsi);
             }
             catch (Exception ex)
             {
@@ -273,7 +312,41 @@ namespace FlavaGymn.DAL
                 //Close Connection
                 conn.Close();
             }
-            return dt;
+            return dtsi;
+        }
+        #endregion
+
+        #region Search DATABASE for members Only
+        public DataTable SearchM(string keyword)
+        {
+            //Method to connect to database
+            SqlConnection conn = new SqlConnection(myconnstrng);
+            //This is used to hold data from the database
+            DataTable dtM = new DataTable();
+            try
+            {
+
+                //Query to get the data from the dtabase
+                String sql = "SELECT id AS[User ID], userType AS[User Type], firstName AS[First Name], lastName AS[Last Name], emailAddress AS[Email Address], gender AS Gender, phoneNumber AS[Telephone #], activity AS Activity, userName AS Username,  password AS Password, address AS Address, dateOfBirth AS [Date of Birth], subscription AS Subscription, status AS Status, dateCreated AS [Date Created], addedBy AS [Added By] FROM  users WHERE (UserType = 'Member') AND id LIKE '%" + keyword + "%' OR firstName LIKE '%" + keyword + "%' OR lastName Like '%" + keyword + "%'OR username LIKE '%" + keyword + "%'";
+                //String sql = "SELECT*FROM dbo.users WHERE  id LIKE '%" + keyword + "%' OR firstName LIKE '%" + keyword + "%' OR lastName Like '%" + keyword + "%'OR username LIKE '%" + keyword + "%'";
+                SqlCommand cmd = new SqlCommand(sql, conn);
+                SqlDataAdapter adapter = new SqlDataAdapter(cmd);
+                //Open database connection
+                conn.Open();
+                //fill data in the datatable
+                adapter.Fill(dtM);
+            }
+            catch (Exception ex)
+            {
+                //Show error message for any messages that might occur
+                MessageBox.Show(ex.Message);
+            }
+            finally
+            {
+                //Close Connection
+                conn.Close();
+            }
+            return dtM;
         }
         #endregion
         #region

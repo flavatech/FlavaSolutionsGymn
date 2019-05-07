@@ -309,9 +309,7 @@
             this.cbUserType.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbUserType.FormattingEnabled = true;
             this.cbUserType.Items.AddRange(new object[] {
-            "Instructor",
-            "Member",
-            "Staff"});
+            "Member"});
             this.cbUserType.Location = new System.Drawing.Point(743, 337);
             this.cbUserType.MaxDropDownItems = 10;
             this.cbUserType.Name = "cbUserType";

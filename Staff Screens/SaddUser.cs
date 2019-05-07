@@ -132,22 +132,23 @@ namespace FlavaGymn
         {
             //get the index of the particular row
             int rowIndex = e.RowIndex;
-           tbaddUserId.Text = dgvAdduser.Rows[rowIndex].Cells[0].Value.ToString();
-            tbFirstName.Text = dgvAdduser.Rows[rowIndex].Cells[1].Value.ToString();
-            tbLastName.Text = dgvAdduser.Rows[rowIndex].Cells[2].Value.ToString();
-            tbEmail.Text = dgvAdduser.Rows[rowIndex].Cells[3].Value.ToString();
-            cbGender.Text = dgvAdduser.Rows[rowIndex].Cells[4].Value.ToString();
-            tbTelephone.Text = dgvAdduser.Rows[rowIndex].Cells[5].Value.ToString();
-            cbActivity.Text = dgvAdduser.Rows[rowIndex].Cells[6].Value.ToString();
-            tbUsername.Text = dgvAdduser.Rows[rowIndex].Cells[7].Value.ToString();
-            tbPassword.Text = dgvAdduser.Rows[rowIndex].Cells[8].Value.ToString();
-            cbUserType.Text = dgvAdduser.Rows[rowIndex].Cells[9].Value.ToString(); ;
+            tbaddUserId.Text = dgvAdduser.Rows[rowIndex].Cells[0].Value.ToString();
+            cbUserType.Text = dgvAdduser.Rows[rowIndex].Cells[1].Value.ToString(); ;
+            tbFirstName.Text = dgvAdduser.Rows[rowIndex].Cells[2].Value.ToString();
+            tbLastName.Text = dgvAdduser.Rows[rowIndex].Cells[3].Value.ToString();
+            tbEmail.Text = dgvAdduser.Rows[rowIndex].Cells[4].Value.ToString();
+            cbGender.Text = dgvAdduser.Rows[rowIndex].Cells[5].Value.ToString();
+            tbTelephone.Text = dgvAdduser.Rows[rowIndex].Cells[6].Value.ToString();
+            cbActivity.Text = dgvAdduser.Rows[rowIndex].Cells[7].Value.ToString();
+            tbUsername.Text = dgvAdduser.Rows[rowIndex].Cells[8].Value.ToString();
+            tbPassword.Text = dgvAdduser.Rows[rowIndex].Cells[9].Value.ToString();
+
             tbAddress.Text = dgvAdduser.Rows[rowIndex].Cells[10].Value.ToString();
             dpDOB.Text = dgvAdduser.Rows[rowIndex].Cells[11].Value.ToString();
             //dateCreated12
             //addedby13
-          cbSubscription.Text = dgvAdduser.Rows[rowIndex].Cells[14].Value.ToString();
-          cbSubscriptionStatus.Text = dgvAdduser.Rows[rowIndex].Cells[15].Value.ToString();
+            cbSubscription.Text = dgvAdduser.Rows[rowIndex].Cells[14].Value.ToString();
+            cbSubscriptionStatus.Text = dgvAdduser.Rows[rowIndex].Cells[15].Value.ToString();
         }
           private void BtnUpdate_Click(object sender, EventArgs e)
         {

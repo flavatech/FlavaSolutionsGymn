@@ -24,7 +24,7 @@ namespace FlavaGymn
        userDAL d = new userDAL();
         private void Signup_Load(object sender, EventArgs e)
         {
-            DataTable dt = d.Select();
+            DataTable dt = d.SelectM();
             dgvAdduser.DataSource = dt;
         }
 
@@ -76,7 +76,7 @@ namespace FlavaGymn
             }
             Clear();
             //refresh the datagrid view
-            DataTable dt = d.Select();
+            DataTable dt = d.SelectM();
             dgvAdduser.DataSource = dt;
 
         }
@@ -135,15 +135,16 @@ namespace FlavaGymn
             //get the index of the particular row
             int rowIndex = e.RowIndex;
             tbaddUserId.Text = dgvAdduser.Rows[rowIndex].Cells[0].Value.ToString();
-            tbFirstName.Text = dgvAdduser.Rows[rowIndex].Cells[1].Value.ToString();
-            tbLastName.Text = dgvAdduser.Rows[rowIndex].Cells[2].Value.ToString();
-            tbEmail.Text = dgvAdduser.Rows[rowIndex].Cells[3].Value.ToString();
-            cbGender.Text = dgvAdduser.Rows[rowIndex].Cells[4].Value.ToString();
-            tbTelephone.Text = dgvAdduser.Rows[rowIndex].Cells[5].Value.ToString();
-            cbActivity.Text = dgvAdduser.Rows[rowIndex].Cells[6].Value.ToString();
-            tbUsername.Text = dgvAdduser.Rows[rowIndex].Cells[7].Value.ToString();
-            tbPassword.Text = dgvAdduser.Rows[rowIndex].Cells[8].Value.ToString();
-            cbUserType.Text = dgvAdduser.Rows[rowIndex].Cells[9].Value.ToString(); ;
+            cbUserType.Text = dgvAdduser.Rows[rowIndex].Cells[1].Value.ToString(); ;
+            tbFirstName.Text = dgvAdduser.Rows[rowIndex].Cells[2].Value.ToString();
+            tbLastName.Text = dgvAdduser.Rows[rowIndex].Cells[3].Value.ToString();
+            tbEmail.Text = dgvAdduser.Rows[rowIndex].Cells[4].Value.ToString();
+            cbGender.Text = dgvAdduser.Rows[rowIndex].Cells[5].Value.ToString();
+            tbTelephone.Text = dgvAdduser.Rows[rowIndex].Cells[6].Value.ToString();
+            cbActivity.Text = dgvAdduser.Rows[rowIndex].Cells[7].Value.ToString();
+            tbUsername.Text = dgvAdduser.Rows[rowIndex].Cells[8].Value.ToString();
+            tbPassword.Text = dgvAdduser.Rows[rowIndex].Cells[9].Value.ToString();
+
             tbAddress.Text = dgvAdduser.Rows[rowIndex].Cells[10].Value.ToString();
             dpDOB.Text = dgvAdduser.Rows[rowIndex].Cells[11].Value.ToString();
             //dateCreated12
@@ -189,7 +190,7 @@ namespace FlavaGymn
                 MessageBox.Show("Failed to update User");
             }
             //Referesh DataGrid View
-            DataTable dt = d.Select();
+            DataTable dt = d.SelectM();
             dgvAdduser.DataSource = dt;
         }
 
@@ -209,7 +210,7 @@ namespace FlavaGymn
                 MessageBox.Show("Failed to delete user");
             }
             //Referesh DataGrid View
-            DataTable dt = d.Select();
+            DataTable dt = d.SelectM();
             dgvAdduser.DataSource = dt;
             Clear();
         }
@@ -223,13 +224,13 @@ namespace FlavaGymn
             if (keywords != null)
             {
                 //Show user based on keyword
-                DataTable dt = d.Search(keywords);
+                DataTable dt = d.SearchM(keywords);
                 dgvAdduser.DataSource = dt;
             }
             else
             {
                 //Show all users in database
-                DataTable dt = d.Select();
+                DataTable dt = d.SelectM();
                 dgvAdduser.DataSource = dt;
             }
         }
