@@ -19,12 +19,17 @@ namespace FlavaGymn
             InitializeComponent();
         }
 
-        subscriptionsBLL p = new subscriptionsBLL();
-        subscriptionsDAL sDAL = new subscriptionsDAL();
+        //subscriptionsBLL p = new subscriptionsBLL();
+        //subscriptionsDAL sDAL = new subscriptionsDAL();
+        DeaCusDAL dcDAL = new DeaCusDAL();
 
         private void SelectRole_Load(object sender, EventArgs e)
         {
+            //get the transactiontype value from the user dashboard
+            string type = adminDashBoard.transactionType;
 
+            //Set the value on lbllblPurchasesAndSales
+            lblPurchasesAndSales.Text = type;
         }
 
         private void BtnExit_Click(object sender, EventArgs e)
@@ -45,7 +50,7 @@ namespace FlavaGymn
         private void BtnSave_Click(object sender, EventArgs e)
         {
             //Get all the values from the form
-           
+
 
         }
 
@@ -58,5 +63,43 @@ namespace FlavaGymn
         {
 
         }
+
+        private void TbSearch_TextChanged(object sender, EventArgs e)
+        {
+            //get the keyword fro the textbox
+            string keywords = tbSearch.Text;
+            if (keywords == "")
+            {
+                //Clear all the textBoxes
+                Clear();
+                return;
+
+            }
+            DeaCusBLL dc = dcDAL.SearchDealerCustomerForTransaction(keywords);
+
+            //Set the calue of the textboxes
+
+            tbName.Text = dc.name;
+            tbEmail.Text = dc.emailAddress;
+            tbContact.Text = dc.contact;
+            tbAddress.Text = dc.address;
+
+
+        }
+
+        private void Clear()
+        {
+            var name = tbName;
+            var email = tbEmail;
+            var contact = tbContact;
+            var address = tbAddress;
+
+            name.Clear();
+            email.Clear();
+            contact.Clear();
+            address.Clear();
+        }
+
+
     }
 }

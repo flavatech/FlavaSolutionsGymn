@@ -57,6 +57,7 @@
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.purchaseToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.purchaseToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.pnlFooter.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
@@ -75,7 +76,8 @@
             this.productsToolStripMenuItem,
             this.categoriesToolStripMenuItem,
             this.customersToolStripMenuItem,
-            this.purchaseToolStripMenuItem});
+            this.purchaseToolStripMenuItem,
+            this.purchaseToolStripMenuItem1});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(1822, 29);
@@ -323,6 +325,14 @@
             this.purchaseToolStripMenuItem.Text = "Purchase";
             this.purchaseToolStripMenuItem.Click += new System.EventHandler(this.PurchaseToolStripMenuItem_Click);
             // 
+            // purchaseToolStripMenuItem1
+            // 
+            this.purchaseToolStripMenuItem1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.purchaseToolStripMenuItem1.Name = "purchaseToolStripMenuItem1";
+            this.purchaseToolStripMenuItem1.Size = new System.Drawing.Size(58, 25);
+            this.purchaseToolStripMenuItem1.Text = "Sales";
+            this.purchaseToolStripMenuItem1.Click += new System.EventHandler(this.PurchaseToolStripMenuItem1_Click);
+            // 
             // adminDashBoard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -389,5 +399,6 @@
         private System.Windows.Forms.ToolStripMenuItem categoriesToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem customersToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem purchaseToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem purchaseToolStripMenuItem1;
     }
 }

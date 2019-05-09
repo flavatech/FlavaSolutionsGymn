@@ -11,7 +11,7 @@ using System.Windows.Forms;
 
 namespace FlavaGymn.DAL
 {
-    class customersDAL
+    class DeaCusDAL
     {
         static string myconnstrng = ConfigurationManager.ConnectionStrings["connstrng"].ConnectionString;
         #region SELECT DATA FOR CUSTOMERS DATABASE
@@ -48,7 +48,7 @@ namespace FlavaGymn.DAL
         }
         #endregion
         #region INSERT THE DATA INTO CUSTOMERS THE DATABASE
-        public bool Insert(customersBLL c)
+        public bool Insert(DeaCusBLL c)
         {
             bool isSucccess = false;
             SqlConnection conn = new SqlConnection(myconnstrng);
@@ -89,7 +89,7 @@ namespace FlavaGymn.DAL
         }
         #endregion
         #region UPDATE THE DATA IN THE CUSTOMERS THE DATABASE
-        public bool Update(customersBLL c)
+        public bool Update(DeaCusBLL c)
         {
             //sql Connection for database connection
             SqlConnection conn = new SqlConnection(myconnstrng);
@@ -136,7 +136,7 @@ namespace FlavaGymn.DAL
         }
         #endregion
         #region DELETE DATA FROM THE CUSTOMERS DATABASE
-        public bool Delete(customersBLL c)
+        public bool Delete(DeaCusBLL c)
         {
             bool isSuccess = false;
             SqlConnection conn = new SqlConnection(myconnstrng);
@@ -200,6 +200,53 @@ namespace FlavaGymn.DAL
             return dt;
         }
         #endregion
+
+        #region SEARCH CUSTOMERS AND DEALERS FOR CUSTOMER FOR TRANSACTIONS
+        public DeaCusBLL SearchDealerCustomerForTransaction(string keyword)
+        {
+            //Create an object for DeaCust Class
+            DeaCusBLL dc = new DeaCusBLL();
+            //Method to connect to database
+            SqlConnection conn = new SqlConnection(myconnstrng);
+            //This is used to hold data from the database
+            DataTable dt = new DataTable();
+            try
+            {
+
+                //Query to get the data from the database
+                String sql = "SELECT name, emailAddress, contact, address FROM dbo.customers WHERE id LIKE '%" + keyword + "%' OR name LIKE '%" + keyword + "%'";
+                SqlCommand cmd = new SqlCommand(sql, conn);
+                SqlDataAdapter adapter = new SqlDataAdapter(cmd);
+                //Open database connection
+                conn.Open();
+                //fill data in the datatable
+                adapter.Fill(dt);
+
+                // save available data in customerBLL
+                if (dt.Rows.Count > 0)
+                {
+                    dc.name = dt.Rows[0]["name"].ToString();
+                    dc.emailAddress = dt.Rows[0]["emailAddress"].ToString();
+                    dc.contact = dt.Rows[0]["contact"].ToString();
+                    dc.address = dt.Rows[0]["address"].ToString();
+                }
+            }
+            catch (Exception ex)
+            {
+                //Show error message for any messages that might occur
+                MessageBox.Show(ex.Message);
+            }
+            finally
+            {
+                //Close Connection
+                conn.Close();
+            }
+            return dc;
+        }
+        #endregion
     }
+
 }
+
+
 

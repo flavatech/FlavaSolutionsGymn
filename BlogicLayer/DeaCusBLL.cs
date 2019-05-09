@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace FlavaGymn.BlogicLayer
 {
-    class customersBLL
+    class DeaCusBLL
     {
         public int id { get; set; }
         public string type { get; set; }

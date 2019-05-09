@@ -57,11 +57,15 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BlogicLayer\categoriesBLL.cs" />
-    <Compile Include="BlogicLayer\customersBLL.cs" />
+    <Compile Include="BlogicLayer\DeaCusBLL.cs" />
     <Compile Include="BlogicLayer\subscriptionsBLL.cs" />
+    <Compile Include="BlogicLayer\transactionDetailBLL.cs" />
+    <Compile Include="BlogicLayer\transactionsBLL.cs" />
     <Compile Include="DAL\categoriesDAL.cs" />
-    <Compile Include="DAL\customersDAL.cs" />
+    <Compile Include="DAL\DeaCusDAL.cs" />
     <Compile Include="DAL\subscriptionsDAL.cs" />
+    <Compile Include="DAL\transactionDAL.cs" />
+    <Compile Include="DAL\transactionDetailDAL.cs" />
     <Compile Include="User Interface\Categories.cs">
       <SubType>Form</SubType>
     </Compile>

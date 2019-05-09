@@ -17,6 +17,8 @@ namespace FlavaGymn
         {
             InitializeComponent();
         }
+        //Set a public static method to specify whether the form is  purchase or sales
+        public static string transactionType;
 
         private void AddStaffToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -69,15 +71,22 @@ namespace FlavaGymn
             Form.Show();
         }
 
-        private void OrganizationToolStripMenuItem_Click(object sender, EventArgs e)
+         private void PurchaseToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            // set value on transactionType
+            transactionType = "Purchase";
+            PurchasesAndSales purchase = new PurchasesAndSales();
+            purchase.Show();
+
 
         }
 
-        private void PurchaseToolStripMenuItem_Click(object sender, EventArgs e)
+        private void PurchaseToolStripMenuItem1_Click(object sender, EventArgs e)
         {
-            PurchasesAndSales Form = new PurchasesAndSales();
-            Form.Show();
+            // set value on transactionType
+            transactionType = "Sales";
+            PurchasesAndSales sales = new PurchasesAndSales();
+            sales.Show();
 
         }
     }

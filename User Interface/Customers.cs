@@ -20,8 +20,8 @@ namespace FlavaGymn
             InitializeComponent();
         }
 
-        customersBLL c = new customersBLL();
-        customersDAL cudal = new customersDAL();
+        DeaCusBLL c = new DeaCusBLL();
+        DeaCusDAL cudal = new DeaCusDAL();
         userDAL uDal = new userDAL();
 
         private void SelectRole_Load(object sender, EventArgs e)

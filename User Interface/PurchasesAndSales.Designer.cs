@@ -36,52 +36,51 @@
             this.lblPurchasesAndSales = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pnlDcust = new System.Windows.Forms.Panel();
-            this.lblDcustTitle = new System.Windows.Forms.Label();
-            this.lblName = new System.Windows.Forms.Label();
-            this.lblAddress = new System.Windows.Forms.Label();
-            this.lblEmail = new System.Windows.Forms.Label();
-            this.lblContact = new System.Windows.Forms.Label();
-            this.dbDate = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.tbSearch = new System.Windows.Forms.TextBox();
-            this.tbName = new System.Windows.Forms.TextBox();
-            this.tbEmail = new System.Windows.Forms.TextBox();
-            this.tbContact = new System.Windows.Forms.TextBox();
-            this.tbAddress = new System.Windows.Forms.TextBox();
             this.dpBillDate = new System.Windows.Forms.DateTimePicker();
+            this.tbAddress = new System.Windows.Forms.TextBox();
+            this.tbContact = new System.Windows.Forms.TextBox();
+            this.tbEmail = new System.Windows.Forms.TextBox();
+            this.tbName = new System.Windows.Forms.TextBox();
+            this.tbSearch = new System.Windows.Forms.TextBox();
+            this.lblContact = new System.Windows.Forms.Label();
+            this.lblEmail = new System.Windows.Forms.Label();
+            this.dbDate = new System.Windows.Forms.Label();
+            this.lblAddress = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.lblName = new System.Windows.Forms.Label();
+            this.lblDcustTitle = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.button3 = new System.Windows.Forms.Button();
             this.tbInventory = new System.Windows.Forms.TextBox();
+            this.tbRate = new System.Windows.Forms.TextBox();
             this.tbQuantity = new System.Windows.Forms.TextBox();
             this.tbProductName = new System.Windows.Forms.TextBox();
+            this.lblRate = new System.Windows.Forms.Label();
+            this.btnAdd = new System.Windows.Forms.Button();
+            this.tbProductSearch = new System.Windows.Forms.TextBox();
             this.lblQuantity = new System.Windows.Forms.Label();
             this.lblInventory = new System.Windows.Forms.Label();
+            this.lblProductSearch = new System.Windows.Forms.Label();
             this.lblProductName = new System.Windows.Forms.Label();
             this.pnlProductDetails = new System.Windows.Forms.Label();
-            this.tbProductSearch = new System.Windows.Forms.TextBox();
-            this.lblProductSearch = new System.Windows.Forms.Label();
-            this.lblRate = new System.Windows.Forms.Label();
-            this.tbRate = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.btnAdd = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
             this.pnlDatagridView = new System.Windows.Forms.Panel();
-            this.lbldgvAddedProducts = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.lbldgvAddedProducts = new System.Windows.Forms.Label();
             this.pnlCalculation = new System.Windows.Forms.Panel();
             this.lblCalculationDetails = new System.Windows.Forms.Label();
-            this.lblSubtotal = new System.Windows.Forms.Label();
-            this.lblDiscount = new System.Windows.Forms.Label();
-            this.lblVAT = new System.Windows.Forms.Label();
-            this.LblGrandTotal = new System.Windows.Forms.Label();
-            this.lblPaidAmount = new System.Windows.Forms.Label();
             this.lblChange = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.lblPaidAmount = new System.Windows.Forms.Label();
+            this.LblGrandTotal = new System.Windows.Forms.Label();
+            this.lblVAT = new System.Windows.Forms.Label();
+            this.lblDiscount = new System.Windows.Forms.Label();
+            this.lblSubtotal = new System.Windows.Forms.Label();
             this.textBox6 = new System.Windows.Forms.TextBox();
+            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.textBox4 = new System.Windows.Forms.TextBox();
             this.btnCalcSave = new System.Windows.Forms.Button();
+            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.pnlDcust.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -195,45 +194,59 @@
             this.pnlDcust.Size = new System.Drawing.Size(1801, 119);
             this.pnlDcust.TabIndex = 16;
             // 
-            // lblDcustTitle
+            // dpBillDate
             // 
-            this.lblDcustTitle.AutoSize = true;
-            this.lblDcustTitle.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDcustTitle.Location = new System.Drawing.Point(3, 1);
-            this.lblDcustTitle.Name = "lblDcustTitle";
-            this.lblDcustTitle.Size = new System.Drawing.Size(114, 17);
-            this.lblDcustTitle.TabIndex = 0;
-            this.lblDcustTitle.Text = "Customer Details";
+            this.dpBillDate.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dpBillDate.Location = new System.Drawing.Point(1408, 22);
+            this.dpBillDate.Name = "dpBillDate";
+            this.dpBillDate.Size = new System.Drawing.Size(283, 25);
+            this.dpBillDate.TabIndex = 6;
             // 
-            // lblName
+            // tbAddress
             // 
-            this.lblName.AutoSize = true;
-            this.lblName.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblName.Location = new System.Drawing.Point(3, 72);
-            this.lblName.Name = "lblName";
-            this.lblName.Size = new System.Drawing.Size(46, 17);
-            this.lblName.TabIndex = 0;
-            this.lblName.Text = "Name:";
+            this.tbAddress.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbAddress.Location = new System.Drawing.Point(944, 25);
+            this.tbAddress.Multiline = true;
+            this.tbAddress.Name = "tbAddress";
+            this.tbAddress.Size = new System.Drawing.Size(283, 29);
+            this.tbAddress.TabIndex = 5;
             // 
-            // lblAddress
+            // tbContact
             // 
-            this.lblAddress.AutoSize = true;
-            this.lblAddress.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblAddress.Location = new System.Drawing.Point(878, 28);
-            this.lblAddress.Name = "lblAddress";
-            this.lblAddress.Size = new System.Drawing.Size(59, 17);
-            this.lblAddress.TabIndex = 1;
-            this.lblAddress.Text = "Address:";
+            this.tbContact.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbContact.Location = new System.Drawing.Point(460, 69);
+            this.tbContact.Multiline = true;
+            this.tbContact.Name = "tbContact";
+            this.tbContact.Size = new System.Drawing.Size(283, 29);
+            this.tbContact.TabIndex = 4;
             // 
-            // lblEmail
+            // tbEmail
             // 
-            this.lblEmail.AutoSize = true;
-            this.lblEmail.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEmail.Location = new System.Drawing.Point(390, 28);
-            this.lblEmail.Name = "lblEmail";
-            this.lblEmail.Size = new System.Drawing.Size(42, 17);
-            this.lblEmail.TabIndex = 3;
-            this.lblEmail.Text = "Email:";
+            this.tbEmail.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbEmail.Location = new System.Drawing.Point(460, 25);
+            this.tbEmail.Multiline = true;
+            this.tbEmail.Name = "tbEmail";
+            this.tbEmail.Size = new System.Drawing.Size(283, 29);
+            this.tbEmail.TabIndex = 3;
+            // 
+            // tbName
+            // 
+            this.tbName.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbName.Location = new System.Drawing.Point(60, 72);
+            this.tbName.Multiline = true;
+            this.tbName.Name = "tbName";
+            this.tbName.Size = new System.Drawing.Size(283, 29);
+            this.tbName.TabIndex = 2;
+            // 
+            // tbSearch
+            // 
+            this.tbSearch.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbSearch.Location = new System.Drawing.Point(60, 28);
+            this.tbSearch.Multiline = true;
+            this.tbSearch.Name = "tbSearch";
+            this.tbSearch.Size = new System.Drawing.Size(283, 29);
+            this.tbSearch.TabIndex = 1;
+            this.tbSearch.TextChanged += new System.EventHandler(this.TbSearch_TextChanged);
             // 
             // lblContact
             // 
@@ -245,6 +258,16 @@
             this.lblContact.TabIndex = 4;
             this.lblContact.Text = "Contact:";
             // 
+            // lblEmail
+            // 
+            this.lblEmail.AutoSize = true;
+            this.lblEmail.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEmail.Location = new System.Drawing.Point(390, 28);
+            this.lblEmail.Name = "lblEmail";
+            this.lblEmail.Size = new System.Drawing.Size(42, 17);
+            this.lblEmail.TabIndex = 3;
+            this.lblEmail.Text = "Email:";
+            // 
             // dbDate
             // 
             this.dbDate.AutoSize = true;
@@ -254,6 +277,16 @@
             this.dbDate.Size = new System.Drawing.Size(58, 17);
             this.dbDate.TabIndex = 2;
             this.dbDate.Text = "Bill Date:";
+            // 
+            // lblAddress
+            // 
+            this.lblAddress.AutoSize = true;
+            this.lblAddress.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAddress.Location = new System.Drawing.Point(878, 28);
+            this.lblAddress.Name = "lblAddress";
+            this.lblAddress.Size = new System.Drawing.Size(59, 17);
+            this.lblAddress.TabIndex = 1;
+            this.lblAddress.Text = "Address:";
             // 
             // label6
             // 
@@ -265,58 +298,25 @@
             this.label6.TabIndex = 0;
             this.label6.Text = "Search:";
             // 
-            // tbSearch
+            // lblName
             // 
-            this.tbSearch.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbSearch.Location = new System.Drawing.Point(60, 28);
-            this.tbSearch.Multiline = true;
-            this.tbSearch.Name = "tbSearch";
-            this.tbSearch.Size = new System.Drawing.Size(283, 29);
-            this.tbSearch.TabIndex = 1;
+            this.lblName.AutoSize = true;
+            this.lblName.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblName.Location = new System.Drawing.Point(3, 72);
+            this.lblName.Name = "lblName";
+            this.lblName.Size = new System.Drawing.Size(46, 17);
+            this.lblName.TabIndex = 0;
+            this.lblName.Text = "Name:";
             // 
-            // tbName
+            // lblDcustTitle
             // 
-            this.tbName.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbName.Location = new System.Drawing.Point(60, 72);
-            this.tbName.Multiline = true;
-            this.tbName.Name = "tbName";
-            this.tbName.Size = new System.Drawing.Size(283, 29);
-            this.tbName.TabIndex = 2;
-            // 
-            // tbEmail
-            // 
-            this.tbEmail.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbEmail.Location = new System.Drawing.Point(460, 25);
-            this.tbEmail.Multiline = true;
-            this.tbEmail.Name = "tbEmail";
-            this.tbEmail.Size = new System.Drawing.Size(283, 29);
-            this.tbEmail.TabIndex = 3;
-            // 
-            // tbContact
-            // 
-            this.tbContact.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbContact.Location = new System.Drawing.Point(460, 69);
-            this.tbContact.Multiline = true;
-            this.tbContact.Name = "tbContact";
-            this.tbContact.Size = new System.Drawing.Size(283, 29);
-            this.tbContact.TabIndex = 4;
-            // 
-            // tbAddress
-            // 
-            this.tbAddress.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbAddress.Location = new System.Drawing.Point(944, 25);
-            this.tbAddress.Multiline = true;
-            this.tbAddress.Name = "tbAddress";
-            this.tbAddress.Size = new System.Drawing.Size(283, 29);
-            this.tbAddress.TabIndex = 5;
-            // 
-            // dpBillDate
-            // 
-            this.dpBillDate.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dpBillDate.Location = new System.Drawing.Point(1408, 22);
-            this.dpBillDate.Name = "dpBillDate";
-            this.dpBillDate.Size = new System.Drawing.Size(283, 25);
-            this.dpBillDate.TabIndex = 6;
+            this.lblDcustTitle.AutoSize = true;
+            this.lblDcustTitle.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDcustTitle.Location = new System.Drawing.Point(3, 1);
+            this.lblDcustTitle.Name = "lblDcustTitle";
+            this.lblDcustTitle.Size = new System.Drawing.Size(114, 17);
+            this.lblDcustTitle.TabIndex = 0;
+            this.lblDcustTitle.Text = "Customer Details";
             // 
             // panel1
             // 
@@ -343,6 +343,15 @@
             this.panel1.Size = new System.Drawing.Size(1801, 97);
             this.panel1.TabIndex = 16;
             // 
+            // button3
+            // 
+            this.button3.Location = new System.Drawing.Point(1186, -465);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(75, 23);
+            this.button3.TabIndex = 17;
+            this.button3.Text = "Add";
+            this.button3.UseVisualStyleBackColor = true;
+            // 
             // tbInventory
             // 
             this.tbInventory.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -351,6 +360,15 @@
             this.tbInventory.Name = "tbInventory";
             this.tbInventory.Size = new System.Drawing.Size(197, 29);
             this.tbInventory.TabIndex = 9;
+            // 
+            // tbRate
+            // 
+            this.tbRate.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbRate.Location = new System.Drawing.Point(1036, 37);
+            this.tbRate.Multiline = true;
+            this.tbRate.Name = "tbRate";
+            this.tbRate.Size = new System.Drawing.Size(147, 29);
+            this.tbRate.TabIndex = 5;
             // 
             // tbQuantity
             // 
@@ -369,6 +387,39 @@
             this.tbProductName.Name = "tbProductName";
             this.tbProductName.Size = new System.Drawing.Size(237, 29);
             this.tbProductName.TabIndex = 8;
+            // 
+            // lblRate
+            // 
+            this.lblRate.AutoSize = true;
+            this.lblRate.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblRate.Location = new System.Drawing.Point(993, 40);
+            this.lblRate.Name = "lblRate";
+            this.lblRate.Size = new System.Drawing.Size(37, 17);
+            this.lblRate.TabIndex = 4;
+            this.lblRate.Text = "Rate:";
+            // 
+            // btnAdd
+            // 
+            this.btnAdd.BackColor = System.Drawing.Color.DeepSkyBlue;
+            this.btnAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAdd.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAdd.ForeColor = System.Drawing.Color.White;
+            this.btnAdd.Location = new System.Drawing.Point(1500, 28);
+            this.btnAdd.Name = "btnAdd";
+            this.btnAdd.Size = new System.Drawing.Size(99, 41);
+            this.btnAdd.TabIndex = 9;
+            this.btnAdd.Text = "Add";
+            this.btnAdd.UseVisualStyleBackColor = false;
+            this.btnAdd.Click += new System.EventHandler(this.BtnSave_Click);
+            // 
+            // tbProductSearch
+            // 
+            this.tbProductSearch.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbProductSearch.Location = new System.Drawing.Point(59, 37);
+            this.tbProductSearch.Multiline = true;
+            this.tbProductSearch.Name = "tbProductSearch";
+            this.tbProductSearch.Size = new System.Drawing.Size(227, 29);
+            this.tbProductSearch.TabIndex = 7;
             // 
             // lblQuantity
             // 
@@ -390,6 +441,16 @@
             this.lblInventory.TabIndex = 1;
             this.lblInventory.Text = "Inventory:";
             // 
+            // lblProductSearch
+            // 
+            this.lblProductSearch.AutoSize = true;
+            this.lblProductSearch.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblProductSearch.Location = new System.Drawing.Point(3, 40);
+            this.lblProductSearch.Name = "lblProductSearch";
+            this.lblProductSearch.Size = new System.Drawing.Size(50, 17);
+            this.lblProductSearch.TabIndex = 0;
+            this.lblProductSearch.Text = "Search:";
+            // 
             // lblProductName
             // 
             this.lblProductName.AutoSize = true;
@@ -410,76 +471,6 @@
             this.pnlProductDetails.TabIndex = 0;
             this.pnlProductDetails.Text = "Product Details";
             // 
-            // tbProductSearch
-            // 
-            this.tbProductSearch.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbProductSearch.Location = new System.Drawing.Point(59, 37);
-            this.tbProductSearch.Multiline = true;
-            this.tbProductSearch.Name = "tbProductSearch";
-            this.tbProductSearch.Size = new System.Drawing.Size(227, 29);
-            this.tbProductSearch.TabIndex = 7;
-            // 
-            // lblProductSearch
-            // 
-            this.lblProductSearch.AutoSize = true;
-            this.lblProductSearch.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblProductSearch.Location = new System.Drawing.Point(3, 40);
-            this.lblProductSearch.Name = "lblProductSearch";
-            this.lblProductSearch.Size = new System.Drawing.Size(50, 17);
-            this.lblProductSearch.TabIndex = 0;
-            this.lblProductSearch.Text = "Search:";
-            // 
-            // lblRate
-            // 
-            this.lblRate.AutoSize = true;
-            this.lblRate.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblRate.Location = new System.Drawing.Point(993, 40);
-            this.lblRate.Name = "lblRate";
-            this.lblRate.Size = new System.Drawing.Size(37, 17);
-            this.lblRate.TabIndex = 4;
-            this.lblRate.Text = "Rate:";
-            // 
-            // tbRate
-            // 
-            this.tbRate.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbRate.Location = new System.Drawing.Point(1036, 37);
-            this.tbRate.Multiline = true;
-            this.tbRate.Name = "tbRate";
-            this.tbRate.Size = new System.Drawing.Size(147, 29);
-            this.tbRate.TabIndex = 5;
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(0, 0);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 17;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
-            // 
-            // btnAdd
-            // 
-            this.btnAdd.BackColor = System.Drawing.Color.DeepSkyBlue;
-            this.btnAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAdd.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAdd.ForeColor = System.Drawing.Color.White;
-            this.btnAdd.Location = new System.Drawing.Point(1500, 28);
-            this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(99, 41);
-            this.btnAdd.TabIndex = 9;
-            this.btnAdd.Text = "Add";
-            this.btnAdd.UseVisualStyleBackColor = false;
-            this.btnAdd.Click += new System.EventHandler(this.BtnSave_Click);
-            // 
-            // button3
-            // 
-            this.button3.Location = new System.Drawing.Point(1186, -465);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(75, 23);
-            this.button3.TabIndex = 17;
-            this.button3.Text = "Add";
-            this.button3.UseVisualStyleBackColor = true;
-            // 
             // pnlDatagridView
             // 
             this.pnlDatagridView.Controls.Add(this.dataGridView1);
@@ -488,6 +479,14 @@
             this.pnlDatagridView.Name = "pnlDatagridView";
             this.pnlDatagridView.Size = new System.Drawing.Size(937, 358);
             this.pnlDatagridView.TabIndex = 18;
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(6, 34);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(919, 321);
+            this.dataGridView1.TabIndex = 1;
             // 
             // lbldgvAddedProducts
             // 
@@ -498,14 +497,6 @@
             this.lbldgvAddedProducts.Size = new System.Drawing.Size(106, 17);
             this.lbldgvAddedProducts.TabIndex = 0;
             this.lbldgvAddedProducts.Text = "Added Products";
-            // 
-            // dataGridView1
-            // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(6, 34);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(919, 321);
-            this.dataGridView1.TabIndex = 1;
             // 
             // pnlCalculation
             // 
@@ -538,45 +529,15 @@
             this.lblCalculationDetails.TabIndex = 0;
             this.lblCalculationDetails.Text = "Calculation Details";
             // 
-            // lblSubtotal
+            // lblChange
             // 
-            this.lblSubtotal.AutoSize = true;
-            this.lblSubtotal.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSubtotal.Location = new System.Drawing.Point(75, 55);
-            this.lblSubtotal.Name = "lblSubtotal";
-            this.lblSubtotal.Size = new System.Drawing.Size(59, 17);
-            this.lblSubtotal.TabIndex = 4;
-            this.lblSubtotal.Text = "Subtotal:";
-            // 
-            // lblDiscount
-            // 
-            this.lblDiscount.AutoSize = true;
-            this.lblDiscount.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDiscount.Location = new System.Drawing.Point(75, 95);
-            this.lblDiscount.Name = "lblDiscount";
-            this.lblDiscount.Size = new System.Drawing.Size(85, 17);
-            this.lblDiscount.TabIndex = 4;
-            this.lblDiscount.Text = "Discount ( %)";
-            // 
-            // lblVAT
-            // 
-            this.lblVAT.AutoSize = true;
-            this.lblVAT.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblVAT.Location = new System.Drawing.Point(75, 139);
-            this.lblVAT.Name = "lblVAT";
-            this.lblVAT.Size = new System.Drawing.Size(32, 17);
-            this.lblVAT.TabIndex = 4;
-            this.lblVAT.Text = "VAT:";
-            // 
-            // LblGrandTotal
-            // 
-            this.LblGrandTotal.AutoSize = true;
-            this.LblGrandTotal.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblGrandTotal.Location = new System.Drawing.Point(75, 184);
-            this.LblGrandTotal.Name = "LblGrandTotal";
-            this.LblGrandTotal.Size = new System.Drawing.Size(79, 17);
-            this.LblGrandTotal.TabIndex = 4;
-            this.LblGrandTotal.Text = "Grand Total:";
+            this.lblChange.AutoSize = true;
+            this.lblChange.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblChange.Location = new System.Drawing.Point(75, 274);
+            this.lblChange.Name = "lblChange";
+            this.lblChange.Size = new System.Drawing.Size(55, 17);
+            this.lblChange.TabIndex = 4;
+            this.lblChange.Text = "Change:";
             // 
             // lblPaidAmount
             // 
@@ -588,51 +549,54 @@
             this.lblPaidAmount.TabIndex = 4;
             this.lblPaidAmount.Text = "Paid Amount:";
             // 
-            // lblChange
+            // LblGrandTotal
             // 
-            this.lblChange.AutoSize = true;
-            this.lblChange.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblChange.Location = new System.Drawing.Point(75, 274);
-            this.lblChange.Name = "lblChange";
-            this.lblChange.Size = new System.Drawing.Size(55, 17);
-            this.lblChange.TabIndex = 4;
-            this.lblChange.Text = "Change:";
+            this.LblGrandTotal.AutoSize = true;
+            this.LblGrandTotal.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblGrandTotal.Location = new System.Drawing.Point(75, 184);
+            this.LblGrandTotal.Name = "LblGrandTotal";
+            this.LblGrandTotal.Size = new System.Drawing.Size(79, 17);
+            this.LblGrandTotal.TabIndex = 4;
+            this.LblGrandTotal.Text = "Grand Total:";
             // 
-            // textBox1
+            // lblVAT
             // 
-            this.textBox1.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(197, 50);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(423, 29);
-            this.textBox1.TabIndex = 11;
+            this.lblVAT.AutoSize = true;
+            this.lblVAT.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblVAT.Location = new System.Drawing.Point(75, 139);
+            this.lblVAT.Name = "lblVAT";
+            this.lblVAT.Size = new System.Drawing.Size(32, 17);
+            this.lblVAT.TabIndex = 4;
+            this.lblVAT.Text = "VAT:";
             // 
-            // textBox2
+            // lblDiscount
             // 
-            this.textBox2.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(197, 91);
-            this.textBox2.Multiline = true;
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(423, 29);
-            this.textBox2.TabIndex = 12;
+            this.lblDiscount.AutoSize = true;
+            this.lblDiscount.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDiscount.Location = new System.Drawing.Point(75, 95);
+            this.lblDiscount.Name = "lblDiscount";
+            this.lblDiscount.Size = new System.Drawing.Size(85, 17);
+            this.lblDiscount.TabIndex = 4;
+            this.lblDiscount.Text = "Discount ( %)";
             // 
-            // textBox3
+            // lblSubtotal
             // 
-            this.textBox3.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox3.Location = new System.Drawing.Point(197, 136);
-            this.textBox3.Multiline = true;
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(423, 29);
-            this.textBox3.TabIndex = 14;
+            this.lblSubtotal.AutoSize = true;
+            this.lblSubtotal.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSubtotal.Location = new System.Drawing.Point(75, 55);
+            this.lblSubtotal.Name = "lblSubtotal";
+            this.lblSubtotal.Size = new System.Drawing.Size(59, 17);
+            this.lblSubtotal.TabIndex = 4;
+            this.lblSubtotal.Text = "Subtotal:";
             // 
-            // textBox4
+            // textBox6
             // 
-            this.textBox4.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox4.Location = new System.Drawing.Point(197, 180);
-            this.textBox4.Multiline = true;
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(423, 29);
-            this.textBox4.TabIndex = 15;
+            this.textBox6.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox6.Location = new System.Drawing.Point(197, 269);
+            this.textBox6.Multiline = true;
+            this.textBox6.Name = "textBox6";
+            this.textBox6.Size = new System.Drawing.Size(423, 29);
+            this.textBox6.TabIndex = 17;
             // 
             // textBox5
             // 
@@ -643,14 +607,14 @@
             this.textBox5.Size = new System.Drawing.Size(423, 29);
             this.textBox5.TabIndex = 16;
             // 
-            // textBox6
+            // textBox4
             // 
-            this.textBox6.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox6.Location = new System.Drawing.Point(197, 269);
-            this.textBox6.Multiline = true;
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(423, 29);
-            this.textBox6.TabIndex = 17;
+            this.textBox4.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox4.Location = new System.Drawing.Point(197, 180);
+            this.textBox4.Multiline = true;
+            this.textBox4.Name = "textBox4";
+            this.textBox4.Size = new System.Drawing.Size(423, 29);
+            this.textBox4.TabIndex = 15;
             // 
             // btnCalcSave
             // 
@@ -666,13 +630,39 @@
             this.btnCalcSave.UseVisualStyleBackColor = false;
             this.btnCalcSave.Click += new System.EventHandler(this.BtnSave_Click);
             // 
+            // textBox3
+            // 
+            this.textBox3.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox3.Location = new System.Drawing.Point(197, 136);
+            this.textBox3.Multiline = true;
+            this.textBox3.Name = "textBox3";
+            this.textBox3.Size = new System.Drawing.Size(423, 29);
+            this.textBox3.TabIndex = 14;
+            // 
+            // textBox2
+            // 
+            this.textBox2.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox2.Location = new System.Drawing.Point(197, 91);
+            this.textBox2.Multiline = true;
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(423, 29);
+            this.textBox2.TabIndex = 12;
+            // 
+            // textBox1
+            // 
+            this.textBox1.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox1.Location = new System.Drawing.Point(197, 50);
+            this.textBox1.Multiline = true;
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(423, 29);
+            this.textBox1.TabIndex = 11;
+            // 
             // PurchasesAndSales
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1800, 643);
             this.Controls.Add(this.pnlDatagridView);
-            this.Controls.Add(this.button1);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.pnlDcust);
             this.Controls.Add(this.lblPurchasesAndSales);
@@ -733,7 +723,6 @@
         private System.Windows.Forms.Label lblRate;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button btnAdd;
-        private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Panel pnlDatagridView;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Label lbldgvAddedProducts;
