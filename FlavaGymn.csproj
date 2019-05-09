@@ -56,28 +56,32 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AddUser21.cs">
+    <Compile Include="BlogicLayer\categoriesBLL.cs" />
+    <Compile Include="BlogicLayer\subscriptionsBLL.cs" />
+    <Compile Include="DAL\categoriesDAL.cs" />
+    <Compile Include="DAL\subscriptionsDAL.cs" />
+    <Compile Include="Categories.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AddUser21.Designer.cs">
-      <DependentUpon>AddUser21.cs</DependentUpon>
+    <Compile Include="Categories.Designer.cs">
+      <DependentUpon>Categories.cs</DependentUpon>
     </Compile>
-    <Compile Include="SaddStaff.cs">
+    <Compile Include="User Interface\SaddStaff.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="SaddStaff.Designer.cs">
+    <Compile Include="User Interface\SaddStaff.Designer.cs">
       <DependentUpon>SaddStaff.cs</DependentUpon>
     </Compile>
-    <Compile Include="CreateAccount.cs">
+    <Compile Include="User Interface\CreateAccount.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="CreateAccount.Designer.cs">
+    <Compile Include="User Interface\CreateAccount.Designer.cs">
       <DependentUpon>CreateAccount.cs</DependentUpon>
     </Compile>
-    <Compile Include="Staff Screens\SaddUser.cs">
+    <Compile Include="User Interface\SaddUser.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Staff Screens\SaddUser.Designer.cs">
+    <Compile Include="User Interface\SaddUser.Designer.cs">
       <DependentUpon>SaddUser.cs</DependentUpon>
     </Compile>
     <Compile Include="Admin Screens\AddStaff.cs">
@@ -147,11 +151,11 @@
     <Compile Include="salary.cs">
       <DependentUpon>NewFlavaGymn.tt</DependentUpon>
     </Compile>
-    <Compile Include="selectRole.cs">
+    <Compile Include="User Interface\Subscriptions.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="selectRole.Designer.cs">
-      <DependentUpon>selectRole.cs</DependentUpon>
+    <Compile Include="User Interface\Subscriptions.Designer.cs">
+      <DependentUpon>Subscriptions.cs</DependentUpon>
     </Compile>
     <Compile Include="Admin Screens\addUser.cs">
       <SubType>Form</SubType>
@@ -180,16 +184,16 @@
     <Compile Include="user.cs">
       <DependentUpon>NewFlavaGymn.tt</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="AddUser21.resx">
-      <DependentUpon>AddUser21.cs</DependentUpon>
+    <EmbeddedResource Include="Categories.resx">
+      <DependentUpon>Categories.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="SaddStaff.resx">
+    <EmbeddedResource Include="User Interface\SaddStaff.resx">
       <DependentUpon>SaddStaff.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="CreateAccount.resx">
+    <EmbeddedResource Include="User Interface\CreateAccount.resx">
       <DependentUpon>CreateAccount.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Staff Screens\SaddUser.resx">
+    <EmbeddedResource Include="User Interface\SaddUser.resx">
       <DependentUpon>SaddUser.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Admin Screens\AddStaff.resx">
@@ -214,8 +218,8 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="selectRole.resx">
-      <DependentUpon>selectRole.cs</DependentUpon>
+    <EmbeddedResource Include="User Interface\Subscriptions.resx">
+      <DependentUpon>Subscriptions.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Admin Screens\addUser.resx">
       <DependentUpon>addUser.cs</DependentUpon>
@@ -259,7 +263,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="System\" />
-    <Folder Include="User Screens\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

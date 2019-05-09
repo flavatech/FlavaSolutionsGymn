@@ -48,5 +48,19 @@ namespace FlavaGymn
             Login.Show();
             this.Hide();
         }
+
+        private void SubscriptionsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Subscriptions Form = new Subscriptions();
+            Form.Show();
+
+        }
+
+        private void CategoriesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Categories Form = new Categories();
+            Form.Show();
+
+        }
     }
 }

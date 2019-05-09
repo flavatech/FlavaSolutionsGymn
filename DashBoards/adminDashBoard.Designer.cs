@@ -43,6 +43,9 @@
             this.instructorsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.viewInstructorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.viewInstructorStatusToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.productsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.subscriptionsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.categoriesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.lblUser = new System.Windows.Forms.Label();
             this.pnlFooter = new System.Windows.Forms.Panel();
             this.lblFooter = new System.Windows.Forms.Label();
@@ -69,7 +72,9 @@
             this.organizationToolStripMenuItem,
             this.staffToolStripMenuItem,
             this.membersToolStripMenuItem,
-            this.instructorsToolStripMenuItem});
+            this.instructorsToolStripMenuItem,
+            this.productsToolStripMenuItem,
+            this.categoriesToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(1822, 29);
@@ -172,6 +177,30 @@
             this.viewInstructorStatusToolStripMenuItem.Name = "viewInstructorStatusToolStripMenuItem";
             this.viewInstructorStatusToolStripMenuItem.Size = new System.Drawing.Size(231, 26);
             this.viewInstructorStatusToolStripMenuItem.Text = "View Instructor Status";
+            // 
+            // productsToolStripMenuItem
+            // 
+            this.productsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.subscriptionsToolStripMenuItem});
+            this.productsToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.productsToolStripMenuItem.Name = "productsToolStripMenuItem";
+            this.productsToolStripMenuItem.Size = new System.Drawing.Size(83, 25);
+            this.productsToolStripMenuItem.Text = "Products";
+            // 
+            // subscriptionsToolStripMenuItem
+            // 
+            this.subscriptionsToolStripMenuItem.Name = "subscriptionsToolStripMenuItem";
+            this.subscriptionsToolStripMenuItem.Size = new System.Drawing.Size(180, 26);
+            this.subscriptionsToolStripMenuItem.Text = "Subscriptions";
+            this.subscriptionsToolStripMenuItem.Click += new System.EventHandler(this.SubscriptionsToolStripMenuItem_Click);
+            // 
+            // categoriesToolStripMenuItem
+            // 
+            this.categoriesToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.categoriesToolStripMenuItem.Name = "categoriesToolStripMenuItem";
+            this.categoriesToolStripMenuItem.Size = new System.Drawing.Size(96, 25);
+            this.categoriesToolStripMenuItem.Text = "Categories";
+            this.categoriesToolStripMenuItem.Click += new System.EventHandler(this.CategoriesToolStripMenuItem_Click);
             // 
             // lblUser
             // 
@@ -354,5 +383,8 @@
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.PictureBox pictureBox4;
+        private System.Windows.Forms.ToolStripMenuItem productsToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem subscriptionsToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem categoriesToolStripMenuItem;
     }
 }

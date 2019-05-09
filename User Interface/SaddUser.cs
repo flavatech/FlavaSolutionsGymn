@@ -21,8 +21,8 @@ namespace FlavaGymn
             InitializeComponent();
         }
 
-        readonly userBLL u = new userBLL();
-        readonly userDAL d = new userDAL();
+         userBLL u = new userBLL();
+         userDAL d = new userDAL();
         private void Signup_Load(object sender, EventArgs e)
         {
             DataTable dt = d.SelectM();

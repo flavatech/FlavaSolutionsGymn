@@ -14,7 +14,7 @@ namespace FlavaGymn.DAL
     class userDAL
     {
         static string myconnstrng = ConfigurationManager.ConnectionStrings["connstrng"].ConnectionString;
-        #region Select Data from Database
+        #region SELET DATA FROM DATABASE
         /*
         public DataTable Select()
         {
@@ -115,7 +115,7 @@ namespace FlavaGymn.DAL
         }
         #endregion
 
-        #region Select Members Only from database
+        #region SELECT MEMBERS FROM DATABASE
 
         public DataTable SelectM()
         {
@@ -149,7 +149,7 @@ namespace FlavaGymn.DAL
         }
 
         #endregion
-        #region Insert the data into the database
+        #region INSERT THE DATA INTO THE DATABASE
         public bool Insert(DashBoards.BlogicLayer.userBLL u)
         {
             bool isSucccess = false;
@@ -198,7 +198,7 @@ namespace FlavaGymn.DAL
             return isSucccess;
         }
         #endregion
-        #region Update data in database
+        #region UPDATE IN DATABASE
         public bool Update(userBLL u)
         {
             bool isSuccess = false;
@@ -248,7 +248,7 @@ namespace FlavaGymn.DAL
             return isSuccess;
         }
         #endregion
-        #region Delete Data from Database
+        #region DELETE DATA FROM DATABASE
         public bool Delete(userBLL u)
         {
             bool isSuccess = false;
@@ -316,7 +316,7 @@ namespace FlavaGymn.DAL
         }
         #endregion
 
-        #region Search DATABASE for members Only
+        #region SEARCH DATABASE MEMBERS ONLY
         public DataTable SearchM(string keyword)
         {
             //Method to connect to database

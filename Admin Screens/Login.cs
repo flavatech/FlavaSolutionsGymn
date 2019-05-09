@@ -105,12 +105,7 @@ namespace FlavaGymn
             this.Close();
         }
 
-        private void Button1_Click(object sender, EventArgs e)
-        {
-            AddUser21 admin21 = new AddUser21();
-            admin21.Show();
-            
-        }
+
     }
 }
 
