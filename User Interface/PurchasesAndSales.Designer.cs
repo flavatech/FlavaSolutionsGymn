@@ -28,11 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.btnExit = new System.Windows.Forms.Button();
-            this.btnDelete = new System.Windows.Forms.Button();
-            this.btnUpdate = new System.Windows.Forms.Button();
-            this.btnSave = new System.Windows.Forms.Button();
-            this.btnClear = new System.Windows.Forms.Button();
             this.lblPurchasesAndSales = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pnlDcust = new System.Windows.Forms.Panel();
@@ -52,10 +47,10 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.button3 = new System.Windows.Forms.Button();
             this.tbInventory = new System.Windows.Forms.TextBox();
-            this.tbRate = new System.Windows.Forms.TextBox();
+            this.tbPrice = new System.Windows.Forms.TextBox();
             this.tbQuantity = new System.Windows.Forms.TextBox();
             this.tbProductName = new System.Windows.Forms.TextBox();
-            this.lblRate = new System.Windows.Forms.Label();
+            this.lblPrice = new System.Windows.Forms.Label();
             this.btnAdd = new System.Windows.Forms.Button();
             this.tbProductSearch = new System.Windows.Forms.TextBox();
             this.lblQuantity = new System.Windows.Forms.Label();
@@ -88,71 +83,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.pnlCalculation.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // btnExit
-            // 
-            this.btnExit.BackColor = System.Drawing.Color.Tomato;
-            this.btnExit.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnExit.ForeColor = System.Drawing.Color.White;
-            this.btnExit.Location = new System.Drawing.Point(591, 86);
-            this.btnExit.Name = "btnExit";
-            this.btnExit.Size = new System.Drawing.Size(92, 33);
-            this.btnExit.TabIndex = 7;
-            this.btnExit.Text = "Exit";
-            this.btnExit.UseVisualStyleBackColor = false;
-            this.btnExit.Click += new System.EventHandler(this.BtnExit_Click);
-            // 
-            // btnDelete
-            // 
-            this.btnDelete.BackColor = System.Drawing.Color.OrangeRed;
-            this.btnDelete.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDelete.ForeColor = System.Drawing.Color.White;
-            this.btnDelete.Location = new System.Drawing.Point(504, 86);
-            this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(81, 33);
-            this.btnDelete.TabIndex = 9;
-            this.btnDelete.Text = "Delete";
-            this.btnDelete.UseVisualStyleBackColor = false;
-            this.btnDelete.Click += new System.EventHandler(this.BtnDelete_Click);
-            // 
-            // btnUpdate
-            // 
-            this.btnUpdate.BackColor = System.Drawing.Color.Gold;
-            this.btnUpdate.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnUpdate.ForeColor = System.Drawing.Color.White;
-            this.btnUpdate.Location = new System.Drawing.Point(330, 86);
-            this.btnUpdate.Name = "btnUpdate";
-            this.btnUpdate.Size = new System.Drawing.Size(81, 33);
-            this.btnUpdate.TabIndex = 9;
-            this.btnUpdate.Text = "Update";
-            this.btnUpdate.UseVisualStyleBackColor = false;
-            this.btnUpdate.Click += new System.EventHandler(this.BtnUpdate_Click);
-            // 
-            // btnSave
-            // 
-            this.btnSave.BackColor = System.Drawing.Color.YellowGreen;
-            this.btnSave.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSave.ForeColor = System.Drawing.Color.White;
-            this.btnSave.Location = new System.Drawing.Point(243, 86);
-            this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(81, 33);
-            this.btnSave.TabIndex = 9;
-            this.btnSave.Text = "Save";
-            this.btnSave.UseVisualStyleBackColor = false;
-            this.btnSave.Click += new System.EventHandler(this.BtnSave_Click);
-            // 
-            // btnClear
-            // 
-            this.btnClear.BackColor = System.Drawing.Color.BlueViolet;
-            this.btnClear.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnClear.ForeColor = System.Drawing.Color.White;
-            this.btnClear.Location = new System.Drawing.Point(417, 86);
-            this.btnClear.Name = "btnClear";
-            this.btnClear.Size = new System.Drawing.Size(81, 33);
-            this.btnClear.TabIndex = 9;
-            this.btnClear.Text = "Clear";
-            this.btnClear.UseVisualStyleBackColor = false;
-            this.btnClear.Click += new System.EventHandler(this.BtnClear_Click);
             // 
             // lblPurchasesAndSales
             // 
@@ -322,17 +252,12 @@
             // 
             this.panel1.Controls.Add(this.button3);
             this.panel1.Controls.Add(this.tbInventory);
-            this.panel1.Controls.Add(this.tbRate);
+            this.panel1.Controls.Add(this.tbPrice);
             this.panel1.Controls.Add(this.tbQuantity);
-            this.panel1.Controls.Add(this.btnDelete);
             this.panel1.Controls.Add(this.tbProductName);
-            this.panel1.Controls.Add(this.btnClear);
-            this.panel1.Controls.Add(this.lblRate);
-            this.panel1.Controls.Add(this.btnUpdate);
-            this.panel1.Controls.Add(this.btnSave);
+            this.panel1.Controls.Add(this.lblPrice);
             this.panel1.Controls.Add(this.btnAdd);
             this.panel1.Controls.Add(this.tbProductSearch);
-            this.panel1.Controls.Add(this.btnExit);
             this.panel1.Controls.Add(this.lblQuantity);
             this.panel1.Controls.Add(this.lblInventory);
             this.panel1.Controls.Add(this.lblProductSearch);
@@ -361,14 +286,14 @@
             this.tbInventory.Size = new System.Drawing.Size(197, 29);
             this.tbInventory.TabIndex = 9;
             // 
-            // tbRate
+            // tbPrice
             // 
-            this.tbRate.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbRate.Location = new System.Drawing.Point(1036, 37);
-            this.tbRate.Multiline = true;
-            this.tbRate.Name = "tbRate";
-            this.tbRate.Size = new System.Drawing.Size(147, 29);
-            this.tbRate.TabIndex = 5;
+            this.tbPrice.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbPrice.Location = new System.Drawing.Point(1036, 37);
+            this.tbPrice.Multiline = true;
+            this.tbPrice.Name = "tbPrice";
+            this.tbPrice.Size = new System.Drawing.Size(147, 29);
+            this.tbPrice.TabIndex = 5;
             // 
             // tbQuantity
             // 
@@ -388,15 +313,15 @@
             this.tbProductName.Size = new System.Drawing.Size(237, 29);
             this.tbProductName.TabIndex = 8;
             // 
-            // lblRate
+            // lblPrice
             // 
-            this.lblRate.AutoSize = true;
-            this.lblRate.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblRate.Location = new System.Drawing.Point(993, 40);
-            this.lblRate.Name = "lblRate";
-            this.lblRate.Size = new System.Drawing.Size(37, 17);
-            this.lblRate.TabIndex = 4;
-            this.lblRate.Text = "Rate:";
+            this.lblPrice.AutoSize = true;
+            this.lblPrice.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPrice.Location = new System.Drawing.Point(993, 40);
+            this.lblPrice.Name = "lblPrice";
+            this.lblPrice.Size = new System.Drawing.Size(39, 17);
+            this.lblPrice.TabIndex = 4;
+            this.lblPrice.Text = "Price:";
             // 
             // btnAdd
             // 
@@ -420,6 +345,7 @@
             this.tbProductSearch.Name = "tbProductSearch";
             this.tbProductSearch.Size = new System.Drawing.Size(227, 29);
             this.tbProductSearch.TabIndex = 7;
+            this.tbProductSearch.TextChanged += new System.EventHandler(this.TbProductSearch_TextChanged);
             // 
             // lblQuantity
             // 
@@ -688,11 +614,6 @@
         }
 
         #endregion
-        private System.Windows.Forms.Button btnExit;
-        private System.Windows.Forms.Button btnDelete;
-        private System.Windows.Forms.Button btnUpdate;
-        private System.Windows.Forms.Button btnSave;
-        private System.Windows.Forms.Button btnClear;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Label lblPurchasesAndSales;
         private System.Windows.Forms.Panel pnlDcust;
@@ -719,8 +640,8 @@
         private System.Windows.Forms.Label pnlProductDetails;
         private System.Windows.Forms.TextBox tbProductSearch;
         private System.Windows.Forms.Label lblProductSearch;
-        private System.Windows.Forms.TextBox tbRate;
-        private System.Windows.Forms.Label lblRate;
+        private System.Windows.Forms.TextBox tbPrice;
+        private System.Windows.Forms.Label lblPrice;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button btnAdd;
         private System.Windows.Forms.Panel pnlDatagridView;

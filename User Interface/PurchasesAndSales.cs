@@ -22,6 +22,7 @@ namespace FlavaGymn
         //subscriptionsBLL p = new subscriptionsBLL();
         //subscriptionsDAL sDAL = new subscriptionsDAL();
         DeaCusDAL dcDAL = new DeaCusDAL();
+        subscriptionsDAL pDAL= new subscriptionsDAL();
 
         private void SelectRole_Load(object sender, EventArgs e)
         {
@@ -70,36 +71,57 @@ namespace FlavaGymn
             string keywords = tbSearch.Text;
             if (keywords == "")
             {
-                //Clear all the textBoxes
+             //Clear all the textBoxes
                 Clear();
-                return;
-
-            }
+               return;
+             }
             DeaCusBLL dc = dcDAL.SearchDealerCustomerForTransaction(keywords);
 
-            //Set the calue of the textboxes
+            //Set the value the textboxes
 
             tbName.Text = dc.name;
             tbEmail.Text = dc.emailAddress;
             tbContact.Text = dc.contact;
             tbAddress.Text = dc.address;
-
-
         }
-
-        private void Clear()
+          private void Clear()
         {
             var name = tbName;
             var email = tbEmail;
             var contact = tbContact;
             var address = tbAddress;
+            var productName = tbProductName;
+            var inventory = tbInventory;
+            var price = tbPrice;
+            var quantity = tbQuantity;
 
             name.Clear();
             email.Clear();
             contact.Clear();
             address.Clear();
+            productName.Clear();
+            inventory.Clear();
+            price.Text= "";
+            quantity.Text="";
         }
 
+        private void TbProductSearch_TextChanged(object sender, EventArgs e)
+        {
+            //get the keyword fro the textbox
+            string keywords = tbProductSearch.Text;
+            if (keywords == "")
+            {
+                //Clear all the textBoxes
+                Clear();
+                return;
 
+            }
+            subscriptionsBLL p = pDAL.GetProductsForTransaction(keywords);
+            //Set the value on textboxes based on pObject
+            tbProductName.Text = p.name;
+            tbInventory.Text = p.quantity.ToString();
+            tbPrice.Text = p.price.ToString();
+
+        }
     }
 }
