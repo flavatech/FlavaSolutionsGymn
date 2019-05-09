@@ -30,8 +30,6 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(adminDashBoard));
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.organizationToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.setupOrganizationToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.staffToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.addStaffToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.viewStaffStatusToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -46,6 +44,7 @@
             this.productsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.subscriptionsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.categoriesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.customersToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.lblUser = new System.Windows.Forms.Label();
             this.pnlFooter = new System.Windows.Forms.Panel();
             this.lblFooter = new System.Windows.Forms.Label();
@@ -53,48 +52,35 @@
             this.lblStoreLastName = new System.Windows.Forms.Label();
             this.lblStoreFirstName = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.purchaseToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.pnlFooter.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // menuStrip1
             // 
-            this.menuStrip1.BackColor = System.Drawing.Color.CornflowerBlue;
+            this.menuStrip1.BackColor = System.Drawing.Color.RoyalBlue;
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.organizationToolStripMenuItem,
             this.staffToolStripMenuItem,
             this.membersToolStripMenuItem,
             this.instructorsToolStripMenuItem,
             this.productsToolStripMenuItem,
-            this.categoriesToolStripMenuItem});
+            this.categoriesToolStripMenuItem,
+            this.customersToolStripMenuItem,
+            this.purchaseToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(1822, 29);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
-            // 
-            // organizationToolStripMenuItem
-            // 
-            this.organizationToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.setupOrganizationToolStripMenuItem});
-            this.organizationToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.organizationToolStripMenuItem.Name = "organizationToolStripMenuItem";
-            this.organizationToolStripMenuItem.Size = new System.Drawing.Size(112, 25);
-            this.organizationToolStripMenuItem.Text = "Organization";
-            // 
-            // setupOrganizationToolStripMenuItem
-            // 
-            this.setupOrganizationToolStripMenuItem.Name = "setupOrganizationToolStripMenuItem";
-            this.setupOrganizationToolStripMenuItem.Size = new System.Drawing.Size(214, 26);
-            this.setupOrganizationToolStripMenuItem.Text = "Setup Organization";
             // 
             // staffToolStripMenuItem
             // 
@@ -202,6 +188,15 @@
             this.categoriesToolStripMenuItem.Text = "Categories";
             this.categoriesToolStripMenuItem.Click += new System.EventHandler(this.CategoriesToolStripMenuItem_Click);
             // 
+            // customersToolStripMenuItem
+            // 
+            this.customersToolStripMenuItem.BackColor = System.Drawing.Color.RoyalBlue;
+            this.customersToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.customersToolStripMenuItem.Name = "customersToolStripMenuItem";
+            this.customersToolStripMenuItem.Size = new System.Drawing.Size(97, 25);
+            this.customersToolStripMenuItem.Text = "Customers";
+            this.customersToolStripMenuItem.Click += new System.EventHandler(this.CustomersToolStripMenuItem_Click);
+            // 
             // lblUser
             // 
             this.lblUser.AutoSize = true;
@@ -214,7 +209,7 @@
             // 
             // pnlFooter
             // 
-            this.pnlFooter.BackColor = System.Drawing.Color.CornflowerBlue;
+            this.pnlFooter.BackColor = System.Drawing.Color.RoyalBlue;
             this.pnlFooter.Controls.Add(this.lblFooter);
             this.pnlFooter.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.pnlFooter.Location = new System.Drawing.Point(0, 575);
@@ -275,16 +270,17 @@
             this.label1.TabIndex = 1;
             this.label1.Text = "Administrator Portal";
             // 
-            // pictureBox1
+            // pictureBox4
             // 
-            this.pictureBox1.BackColor = System.Drawing.Color.CornflowerBlue;
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(1551, 0);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(29, 27);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 3;
-            this.pictureBox1.TabStop = false;
+            this.pictureBox4.BackColor = System.Drawing.Color.CornflowerBlue;
+            this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
+            this.pictureBox4.Location = new System.Drawing.Point(1631, 0);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(29, 27);
+            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox4.TabIndex = 3;
+            this.pictureBox4.TabStop = false;
+            this.pictureBox4.Click += new System.EventHandler(this.PictureBox4_Click);
             // 
             // pictureBox2
             // 
@@ -308,17 +304,24 @@
             this.pictureBox3.TabIndex = 3;
             this.pictureBox3.TabStop = false;
             // 
-            // pictureBox4
+            // pictureBox1
             // 
-            this.pictureBox4.BackColor = System.Drawing.Color.CornflowerBlue;
-            this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
-            this.pictureBox4.Location = new System.Drawing.Point(1631, 0);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(29, 27);
-            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox4.TabIndex = 3;
-            this.pictureBox4.TabStop = false;
-            this.pictureBox4.Click += new System.EventHandler(this.PictureBox4_Click);
+            this.pictureBox1.BackColor = System.Drawing.Color.CornflowerBlue;
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(1551, 0);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(29, 27);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 3;
+            this.pictureBox1.TabStop = false;
+            // 
+            // purchaseToolStripMenuItem
+            // 
+            this.purchaseToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.purchaseToolStripMenuItem.Name = "purchaseToolStripMenuItem";
+            this.purchaseToolStripMenuItem.Size = new System.Drawing.Size(85, 25);
+            this.purchaseToolStripMenuItem.Text = "Purchase";
+            this.purchaseToolStripMenuItem.Click += new System.EventHandler(this.PurchaseToolStripMenuItem_Click);
             // 
             // adminDashBoard
             // 
@@ -347,10 +350,10 @@
             this.menuStrip1.PerformLayout();
             this.pnlFooter.ResumeLayout(false);
             this.pnlFooter.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -367,8 +370,6 @@
         private System.Windows.Forms.ToolStripMenuItem vewMembersToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem viewMemberStatusToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem viewMemberPaymentsToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem organizationToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem setupOrganizationToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem instructorsToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem viewInstructorToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem viewInstructorStatusToolStripMenuItem;
@@ -386,5 +387,7 @@
         private System.Windows.Forms.ToolStripMenuItem productsToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem subscriptionsToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem categoriesToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem customersToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem purchaseToolStripMenuItem;
     }
 }

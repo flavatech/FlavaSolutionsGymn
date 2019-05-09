@@ -14,7 +14,7 @@ namespace FlavaGymn.DAL
     class userDAL
     {
         static string myconnstrng = ConfigurationManager.ConnectionStrings["connstrng"].ConnectionString;
-        #region SELET DATA FROM DATABASE
+        #region SELEcT DATA FROM DATABASE
         /*
         public DataTable Select()
         {

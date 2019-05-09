@@ -62,5 +62,23 @@ namespace FlavaGymn
             Form.Show();
 
         }
+
+        private void CustomersToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Customers Form = new Customers();
+            Form.Show();
+        }
+
+        private void OrganizationToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void PurchaseToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            PurchasesAndSales Form = new PurchasesAndSales();
+            Form.Show();
+
+        }
     }
 }

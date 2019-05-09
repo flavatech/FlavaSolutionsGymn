@@ -48,5 +48,11 @@ namespace FlavaGymn
         {
             lblLoggegIn.Text = Login.loggedIn;
         }
+
+        private void CustomersToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Customers Form = new Customers();
+            Form.Show();
+        }
     }
 }

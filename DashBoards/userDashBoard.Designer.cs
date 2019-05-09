@@ -47,6 +47,7 @@
             this.lblStoreLastName = new System.Windows.Forms.Label();
             this.lblStoreFirstName = new System.Windows.Forms.Label();
             this.lblUserCat = new System.Windows.Forms.Label();
+            this.customersToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.pnlFooter.SuspendLayout();
             this.SuspendLayout();
@@ -57,7 +58,8 @@
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.staffToolStripMenuItem,
             this.membersToolStripMenuItem,
-            this.instructorsToolStripMenuItem});
+            this.instructorsToolStripMenuItem,
+            this.customersToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(1822, 29);
@@ -77,14 +79,14 @@
             // addStaffToolStripMenuItem
             // 
             this.addStaffToolStripMenuItem.Name = "addStaffToolStripMenuItem";
-            this.addStaffToolStripMenuItem.Size = new System.Drawing.Size(180, 26);
+            this.addStaffToolStripMenuItem.Size = new System.Drawing.Size(149, 26);
             this.addStaffToolStripMenuItem.Text = "Add Staff";
             this.addStaffToolStripMenuItem.Click += new System.EventHandler(this.AddStaffToolStripMenuItem_Click);
             // 
             // viewStaffStatusToolStripMenuItem
             // 
             this.viewStaffStatusToolStripMenuItem.Name = "viewStaffStatusToolStripMenuItem";
-            this.viewStaffStatusToolStripMenuItem.Size = new System.Drawing.Size(180, 26);
+            this.viewStaffStatusToolStripMenuItem.Size = new System.Drawing.Size(149, 26);
             this.viewStaffStatusToolStripMenuItem.Text = "View Staff";
             // 
             // membersToolStripMenuItem
@@ -219,6 +221,14 @@
             this.lblUserCat.TabIndex = 1;
             this.lblUserCat.Text = "Staff and User management";
             // 
+            // customersToolStripMenuItem
+            // 
+            this.customersToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.customersToolStripMenuItem.Name = "customersToolStripMenuItem";
+            this.customersToolStripMenuItem.Size = new System.Drawing.Size(97, 25);
+            this.customersToolStripMenuItem.Text = "Customers";
+            this.customersToolStripMenuItem.Click += new System.EventHandler(this.CustomersToolStripMenuItem_Click);
+            // 
             // userDashBoard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -267,5 +277,6 @@
         private System.Windows.Forms.Label lblStoreLastName;
         private System.Windows.Forms.Label lblStoreFirstName;
         private System.Windows.Forms.Label lblUserCat;
+        private System.Windows.Forms.ToolStripMenuItem customersToolStripMenuItem;
     }
 }
