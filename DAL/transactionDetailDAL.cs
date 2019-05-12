@@ -15,14 +15,15 @@ namespace FlavaGymn.DAL
         //Create connection string
         static string myconnstrng = ConfigurationManager.ConnectionStrings["connstrng"].ConnectionString;
         #region INSERT METHOD FOR TRANSACTION DETAIL
-        public bool InserttransactionDetail(transactionDetailBLL td)
+        public bool Insert_TransactionDetail(transactionDetailBLL td)
         {
             //Create a bool and set the value to false
             bool isSuccess = false;
            SqlConnection conn = new SqlConnection(myconnstrng);
             try
             {
-                string sql = "INSERT into dbo.transactionDetail (subscriptionid, price, quantity, total, dealer_cust_id, addedDate, addedBy) Values(@subscriptionid, @price, @quantity, @total, @dealer_cust_id, @addedDate, @addedBy)";
+
+                string sql = "INSERT into dbo.transactionDetail(subscriptionid, price, quantity, total, dealer_cust_id, addedDate, addedBy) Values(@subscriptionid, @price, @quantity, @total, @dealer_cust_id, @addedDate, @addedBy)";
                 SqlCommand cmd = new SqlCommand(sql, conn);
                 cmd.Parameters.AddWithValue("@subscriptionid",td.subscriptionid);
                 cmd.Parameters.AddWithValue("@price", td.price);

@@ -26,7 +26,7 @@ namespace FlavaGymn.DAL
            SqlConnection conn = new SqlConnection(myconnstrng);
             try
             {
-                string sql = "INSERT into dbo.transactions (type, dealer_cust_id, grandTotal, transactionDate, tax,discount,addedBy) Values(@type, @dealer_cust_id, @grandTotal, @transactionDate, @tax,discount, @addedBy)";
+                string sql = "INSERT into dbo.transactions (type, dealer_cust_id, grandTotal, transactionDate, tax, discount, addedBy) VALUES (@type, @dealer_cust_id, @grandTotal, @transactionDate, @tax, @discount, @addedBy); SELECT @@IDENTITY;";
                 SqlCommand cmd = new SqlCommand(sql, conn);
                 cmd.Parameters.AddWithValue("@type", t.type);
                 cmd.Parameters.AddWithValue("@dealer_cust_id", t.deal_cust_id);
@@ -40,9 +40,9 @@ namespace FlavaGymn.DAL
 
                 //execute the query
                 object o = cmd.ExecuteScalar();
-                //id the query is execute successfully then the value will not be null, elese it will be null
+                //id the query is execute successfully then the value will not be null, or else it will be null
                 if (o != null)
-                {// Queryable executed successfully
+                {// Query executed successfully
                     transactionID = int.Parse(o.ToString());
                 }
                 else
@@ -61,6 +61,78 @@ namespace FlavaGymn.DAL
                 conn.Close();
             }
             return isSuccess;
+        }
+        #endregion
+        #region  DISPLAY ALL THE TRANSACTION
+        public DataTable DisplayAllTransactions()
+        {
+            //SQlConnection First
+            SqlConnection conn = new SqlConnection(myconnstrng);
+
+            //Create DataTable to hold the data
+            DataTable dt = new DataTable();
+
+            try
+            {
+                //Write the SQL Query to Display all Transactions
+                string sql = "SELECT * FROM dbo.transactions";
+
+                //SqlCommand to Execute Query
+                SqlCommand cmd = new SqlCommand(sql, conn);
+
+                //SqlDataAdapter to Hold the data from database
+                SqlDataAdapter adapter = new SqlDataAdapter(cmd);
+
+                //Open DAtabase Connection
+                conn.Open();
+
+                adapter.Fill(dt);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            finally
+            {
+                conn.Close();
+            }
+
+            return dt;
+        }
+        #endregion
+        #region METHOD TO DISPLAY TRANSACTION BASED ON TRANSACTION TYPE
+        public DataTable DisplayTransactionByType(string type)
+        {
+            //Create SQL Connection
+            SqlConnection conn = new SqlConnection(myconnstrng);
+
+            //Create a DataTable
+            DataTable dt = new DataTable();
+
+            try
+            {
+                //Write SQL Query
+                string sql = "SELECT * FROM dbo.transactions WHERE type='" + type + "'";
+
+                //SQL Command to Execute Query
+                SqlCommand cmd = new SqlCommand(sql, conn);
+                //SQlDataAdapter to hold the data from database
+                SqlDataAdapter adapter = new SqlDataAdapter(cmd);
+
+                //Open DAtabase Connection
+                conn.Open();
+                adapter.Fill(dt);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            finally
+            {
+                conn.Close();
+            }
+
+            return dt;
         }
         #endregion
     }

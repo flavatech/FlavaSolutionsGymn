@@ -244,6 +244,48 @@ namespace FlavaGymn.DAL
             return dc;
         }
         #endregion
+        #region GET ID OF DEALER OR CUSTOMER BASED ON NAME
+        public DeaCusBLL GetDeaCusIdFromName(string name)
+        {
+            //Create an object of Decust BLL
+            DeaCusBLL dc = new DeaCusBLL();
+
+            //Method to connect to database
+            SqlConnection conn = new SqlConnection(myconnstrng);
+            //This is used to hold data from the database
+            DataTable dt = new DataTable();
+
+            try
+            {
+                //Get Id based on name
+                string sql = "SELECT id FROM dbo.customers WHERE name ='" + name + "'";
+                //Create the data adapter to execute the query
+                SqlDataAdapter adapter = new SqlDataAdapter(sql, conn);
+                conn.Open();
+
+                //Pass values to datatable
+                adapter.Fill(dt);
+                if (dt.Rows.Count > 0)
+                {
+                    //pass the value from dt to DeaCusBLL dc
+                    dc.id = int.Parse(dt.Rows[0]["id"].ToString());
+;                }
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            finally
+            {
+                conn.Close();
+            }
+            return dc;
+
+
+
+        }
+        #endregion
     }
 
 }

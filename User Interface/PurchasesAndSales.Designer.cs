@@ -59,7 +59,7 @@
             this.lblProductName = new System.Windows.Forms.Label();
             this.pnlProductDetails = new System.Windows.Forms.Label();
             this.pnlDatagridView = new System.Windows.Forms.Panel();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dgvPurchases = new System.Windows.Forms.DataGridView();
             this.lbldgvAddedProducts = new System.Windows.Forms.Label();
             this.pnlCalculation = new System.Windows.Forms.Panel();
             this.lblCalculationDetails = new System.Windows.Forms.Label();
@@ -69,18 +69,18 @@
             this.lblVAT = new System.Windows.Forms.Label();
             this.lblDiscount = new System.Windows.Forms.Label();
             this.lblSubtotal = new System.Windows.Forms.Label();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.tbChange = new System.Windows.Forms.TextBox();
+            this.tbAmountPaid = new System.Windows.Forms.TextBox();
+            this.tbGrandTotal = new System.Windows.Forms.TextBox();
             this.btnCalcSave = new System.Windows.Forms.Button();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.tbVat = new System.Windows.Forms.TextBox();
+            this.tbDiscount = new System.Windows.Forms.TextBox();
+            this.tbSubtotal = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.pnlDcust.SuspendLayout();
             this.panel1.SuspendLayout();
             this.pnlDatagridView.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvPurchases)).BeginInit();
             this.pnlCalculation.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -89,7 +89,7 @@
             this.lblPurchasesAndSales.AutoSize = true;
             this.lblPurchasesAndSales.BackColor = System.Drawing.Color.RoyalBlue;
             this.lblPurchasesAndSales.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPurchasesAndSales.Location = new System.Drawing.Point(659, 0);
+            this.lblPurchasesAndSales.Location = new System.Drawing.Point(735, 0);
             this.lblPurchasesAndSales.Name = "lblPurchasesAndSales";
             this.lblPurchasesAndSales.Size = new System.Drawing.Size(254, 30);
             this.lblPurchasesAndSales.TabIndex = 8;
@@ -303,6 +303,7 @@
             this.tbQuantity.Name = "tbQuantity";
             this.tbQuantity.Size = new System.Drawing.Size(147, 29);
             this.tbQuantity.TabIndex = 10;
+            this.tbQuantity.Text = "0";
             // 
             // tbProductName
             // 
@@ -335,7 +336,7 @@
             this.btnAdd.TabIndex = 9;
             this.btnAdd.Text = "Add";
             this.btnAdd.UseVisualStyleBackColor = false;
-            this.btnAdd.Click += new System.EventHandler(this.BtnSave_Click);
+            this.btnAdd.Click += new System.EventHandler(this.BtnAdd_Click);
             // 
             // tbProductSearch
             // 
@@ -399,20 +400,20 @@
             // 
             // pnlDatagridView
             // 
-            this.pnlDatagridView.Controls.Add(this.dataGridView1);
+            this.pnlDatagridView.Controls.Add(this.dgvPurchases);
             this.pnlDatagridView.Controls.Add(this.lbldgvAddedProducts);
             this.pnlDatagridView.Location = new System.Drawing.Point(0, 273);
             this.pnlDatagridView.Name = "pnlDatagridView";
             this.pnlDatagridView.Size = new System.Drawing.Size(937, 358);
             this.pnlDatagridView.TabIndex = 18;
             // 
-            // dataGridView1
+            // dgvPurchases
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(6, 34);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(919, 321);
-            this.dataGridView1.TabIndex = 1;
+            this.dgvPurchases.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvPurchases.Location = new System.Drawing.Point(6, 34);
+            this.dgvPurchases.Name = "dgvPurchases";
+            this.dgvPurchases.Size = new System.Drawing.Size(919, 321);
+            this.dgvPurchases.TabIndex = 1;
             // 
             // lbldgvAddedProducts
             // 
@@ -426,6 +427,7 @@
             // 
             // pnlCalculation
             // 
+            this.pnlCalculation.BackColor = System.Drawing.SystemColors.Control;
             this.pnlCalculation.Controls.Add(this.lblCalculationDetails);
             this.pnlCalculation.Controls.Add(this.lblChange);
             this.pnlCalculation.Controls.Add(this.lblPaidAmount);
@@ -433,13 +435,13 @@
             this.pnlCalculation.Controls.Add(this.lblVAT);
             this.pnlCalculation.Controls.Add(this.lblDiscount);
             this.pnlCalculation.Controls.Add(this.lblSubtotal);
-            this.pnlCalculation.Controls.Add(this.textBox6);
-            this.pnlCalculation.Controls.Add(this.textBox5);
-            this.pnlCalculation.Controls.Add(this.textBox4);
+            this.pnlCalculation.Controls.Add(this.tbChange);
+            this.pnlCalculation.Controls.Add(this.tbAmountPaid);
+            this.pnlCalculation.Controls.Add(this.tbGrandTotal);
             this.pnlCalculation.Controls.Add(this.btnCalcSave);
-            this.pnlCalculation.Controls.Add(this.textBox3);
-            this.pnlCalculation.Controls.Add(this.textBox2);
-            this.pnlCalculation.Controls.Add(this.textBox1);
+            this.pnlCalculation.Controls.Add(this.tbVat);
+            this.pnlCalculation.Controls.Add(this.tbDiscount);
+            this.pnlCalculation.Controls.Add(this.tbSubtotal);
             this.pnlCalculation.Location = new System.Drawing.Point(954, 272);
             this.pnlCalculation.Name = "pnlCalculation";
             this.pnlCalculation.Size = new System.Drawing.Size(834, 358);
@@ -515,32 +517,33 @@
             this.lblSubtotal.TabIndex = 4;
             this.lblSubtotal.Text = "Subtotal:";
             // 
-            // textBox6
+            // tbChange
             // 
-            this.textBox6.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox6.Location = new System.Drawing.Point(197, 269);
-            this.textBox6.Multiline = true;
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(423, 29);
-            this.textBox6.TabIndex = 17;
+            this.tbChange.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbChange.Location = new System.Drawing.Point(197, 269);
+            this.tbChange.Multiline = true;
+            this.tbChange.Name = "tbChange";
+            this.tbChange.Size = new System.Drawing.Size(423, 29);
+            this.tbChange.TabIndex = 17;
             // 
-            // textBox5
+            // tbAmountPaid
             // 
-            this.textBox5.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox5.Location = new System.Drawing.Point(197, 225);
-            this.textBox5.Multiline = true;
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(423, 29);
-            this.textBox5.TabIndex = 16;
+            this.tbAmountPaid.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbAmountPaid.Location = new System.Drawing.Point(197, 225);
+            this.tbAmountPaid.Multiline = true;
+            this.tbAmountPaid.Name = "tbAmountPaid";
+            this.tbAmountPaid.Size = new System.Drawing.Size(423, 29);
+            this.tbAmountPaid.TabIndex = 16;
+            this.tbAmountPaid.TextChanged += new System.EventHandler(this.TbAmountPaid_TextChanged);
             // 
-            // textBox4
+            // tbGrandTotal
             // 
-            this.textBox4.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox4.Location = new System.Drawing.Point(197, 180);
-            this.textBox4.Multiline = true;
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(423, 29);
-            this.textBox4.TabIndex = 15;
+            this.tbGrandTotal.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbGrandTotal.Location = new System.Drawing.Point(197, 180);
+            this.tbGrandTotal.Multiline = true;
+            this.tbGrandTotal.Name = "tbGrandTotal";
+            this.tbGrandTotal.Size = new System.Drawing.Size(423, 29);
+            this.tbGrandTotal.TabIndex = 15;
             // 
             // btnCalcSave
             // 
@@ -554,34 +557,37 @@
             this.btnCalcSave.TabIndex = 9;
             this.btnCalcSave.Text = "Save";
             this.btnCalcSave.UseVisualStyleBackColor = false;
-            this.btnCalcSave.Click += new System.EventHandler(this.BtnSave_Click);
+            this.btnCalcSave.Click += new System.EventHandler(this.BtnCalcSave_Click);
             // 
-            // textBox3
+            // tbVat
             // 
-            this.textBox3.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox3.Location = new System.Drawing.Point(197, 136);
-            this.textBox3.Multiline = true;
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(423, 29);
-            this.textBox3.TabIndex = 14;
+            this.tbVat.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbVat.Location = new System.Drawing.Point(197, 136);
+            this.tbVat.Multiline = true;
+            this.tbVat.Name = "tbVat";
+            this.tbVat.Size = new System.Drawing.Size(423, 29);
+            this.tbVat.TabIndex = 14;
+            this.tbVat.TextChanged += new System.EventHandler(this.TbVat_TextChanged);
             // 
-            // textBox2
+            // tbDiscount
             // 
-            this.textBox2.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(197, 91);
-            this.textBox2.Multiline = true;
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(423, 29);
-            this.textBox2.TabIndex = 12;
+            this.tbDiscount.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbDiscount.Location = new System.Drawing.Point(197, 91);
+            this.tbDiscount.Multiline = true;
+            this.tbDiscount.Name = "tbDiscount";
+            this.tbDiscount.Size = new System.Drawing.Size(423, 29);
+            this.tbDiscount.TabIndex = 12;
+            this.tbDiscount.TextChanged += new System.EventHandler(this.TbDiscount_TextChanged);
             // 
-            // textBox1
+            // tbSubtotal
             // 
-            this.textBox1.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(197, 50);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(423, 29);
-            this.textBox1.TabIndex = 11;
+            this.tbSubtotal.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbSubtotal.Location = new System.Drawing.Point(197, 50);
+            this.tbSubtotal.Multiline = true;
+            this.tbSubtotal.Name = "tbSubtotal";
+            this.tbSubtotal.Size = new System.Drawing.Size(423, 29);
+            this.tbSubtotal.TabIndex = 11;
+            this.tbSubtotal.Text = "0";
             // 
             // PurchasesAndSales
             // 
@@ -605,7 +611,7 @@
             this.panel1.PerformLayout();
             this.pnlDatagridView.ResumeLayout(false);
             this.pnlDatagridView.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvPurchases)).EndInit();
             this.pnlCalculation.ResumeLayout(false);
             this.pnlCalculation.PerformLayout();
             this.ResumeLayout(false);
@@ -645,7 +651,7 @@
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button btnAdd;
         private System.Windows.Forms.Panel pnlDatagridView;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dgvPurchases;
         private System.Windows.Forms.Label lbldgvAddedProducts;
         private System.Windows.Forms.Panel pnlCalculation;
         private System.Windows.Forms.Label lblCalculationDetails;
@@ -655,13 +661,13 @@
         private System.Windows.Forms.Label lblVAT;
         private System.Windows.Forms.Label lblDiscount;
         private System.Windows.Forms.Label lblSubtotal;
-        private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox tbChange;
+        private System.Windows.Forms.TextBox tbAmountPaid;
+        private System.Windows.Forms.TextBox tbGrandTotal;
         private System.Windows.Forms.Button btnCalcSave;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox tbVat;
+        private System.Windows.Forms.TextBox tbDiscount;
+        private System.Windows.Forms.TextBox tbSubtotal;
 
         //private flavaGymnDataSet4TableAdapters.rolesTableAdapter rolesTableAdapter;
     }

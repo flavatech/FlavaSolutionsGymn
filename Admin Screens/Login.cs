@@ -18,6 +18,7 @@ namespace FlavaGymn
         {
             InitializeComponent();
             tbPassword.MaxLength = 20;
+            tbPassword.PasswordChar = '*';
         }
         loginBLL l = new loginBLL();
         loginDAL d = new loginDAL();
@@ -105,7 +106,53 @@ namespace FlavaGymn
             this.Close();
         }
 
+        private void TbUsername_Leave(object sender, EventArgs e)
+        {
+            if (tbPassword.Text == "User Name")
+                tbPassword.Text = null;
+            tbPassword.ForeColor = Color.DarkGray;
+        }
 
+        private void TbUsername_Enter(object sender, EventArgs e)
+        {
+            if (tbUsername.Text == "User Name")
+                tbUsername.Text = null;
+            tbUsername.ForeColor = Color.Black;
+        }
+
+        private void TbPassword_Leave(object sender, EventArgs e)
+        {
+            if (tbPassword.Text == "Password")
+                tbPassword.Text = null;
+            tbPassword.ForeColor = Color.DarkGray;
+        }
+
+        private void TbPassword_Enter(object sender, EventArgs e)
+        {
+            if (tbPassword.Text == "Password")
+                tbPassword.Text = null;
+            tbPassword.ForeColor = Color.Black;
+        }
+
+        private void CbUserType_Leave(object sender, EventArgs e)
+        {
+            if (cbUserType.Text == "User Type")
+                cbUserType.Text = null;
+            cbUserType.ForeColor = Color.DarkGray;
+        }
+
+        private void CbUserType_Enter(object sender, EventArgs e)
+        {
+            if (cbUserType.Text == "User Type")
+                cbUserType.Text = null;
+            cbUserType.ForeColor = Color.Black;
+        }
+
+        private void Tester_Click(object sender, EventArgs e)
+        {
+            adminDashBoard Form = new adminDashBoard();
+                Form.Show();
+        }
     }
 }
 

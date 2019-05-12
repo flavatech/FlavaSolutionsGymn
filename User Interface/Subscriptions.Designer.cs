@@ -51,8 +51,11 @@
             this.tbPrice = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.cbCategory = new System.Windows.Forms.ComboBox();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.label3 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvSubscription)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.SuspendLayout();
             // 
             // splitter1
@@ -199,7 +202,7 @@
             // 
             // btnUpdate
             // 
-            this.btnUpdate.BackColor = System.Drawing.Color.Gold;
+            this.btnUpdate.BackColor = System.Drawing.Color.CornflowerBlue;
             this.btnUpdate.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnUpdate.ForeColor = System.Drawing.Color.White;
             this.btnUpdate.Location = new System.Drawing.Point(403, 500);
@@ -212,7 +215,7 @@
             // 
             // btnSave
             // 
-            this.btnSave.BackColor = System.Drawing.Color.YellowGreen;
+            this.btnSave.BackColor = System.Drawing.Color.LimeGreen;
             this.btnSave.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSave.ForeColor = System.Drawing.Color.White;
             this.btnSave.Location = new System.Drawing.Point(316, 500);
@@ -284,6 +287,27 @@
             this.cbCategory.Size = new System.Drawing.Size(239, 29);
             this.cbCategory.TabIndex = 15;
             // 
+            // pictureBox3
+            // 
+            this.pictureBox3.BackColor = System.Drawing.Color.RoyalBlue;
+            this.pictureBox3.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(1678, 35);
+            this.pictureBox3.TabIndex = 15;
+            this.pictureBox3.TabStop = false;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.Color.RoyalBlue;
+            this.label3.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(771, 1);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(176, 30);
+            this.label3.TabIndex = 8;
+            this.label3.Text = "SUBSCRIPTIONS";
+            this.label3.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
             // Subscriptions
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -307,17 +331,19 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.lblQuantity);
             this.Controls.Add(this.lblName);
+            this.Controls.Add(this.label3);
             this.Controls.Add(this.lblSubsriptionId);
             this.Controls.Add(this.btnExit);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.splitter1);
+            this.Controls.Add(this.pictureBox3);
             this.Name = "Subscriptions";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Subscription";
-            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.SelectRole_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvSubscription)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -347,6 +373,8 @@
         private System.Windows.Forms.TextBox tbPrice;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ComboBox cbCategory;
+        private System.Windows.Forms.PictureBox pictureBox3;
+        private System.Windows.Forms.Label label3;
 
         //private flavaGymnDataSet4TableAdapters.rolesTableAdapter rolesTableAdapter;
     }

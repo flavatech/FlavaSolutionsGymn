@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -16,6 +17,8 @@ namespace FlavaGymn.BlogicLayer
         public decimal tax { get; set; }
         public decimal discount { get; set; }
         public int addedBy { get; set; }
+        public DataTable transactionDetails { get; set; }
+
 
 
 

@@ -58,36 +58,44 @@ namespace FlavaGymn
 
         }
 
-        private void CategoriesToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            Categories Form = new Categories();
-            Form.Show();
-
-        }
-
         private void CustomersToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Customers Form = new Customers();
             Form.Show();
         }
 
-         private void PurchaseToolStripMenuItem_Click(object sender, EventArgs e)
+        private void InventoryToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Inventory Form = new Inventory();
+            Form.Show();
+        }
+
+        private void PurchaseToolStripMenuItem2_Click(object sender, EventArgs e)
         {
             // set value on transactionType
             transactionType = "Purchase";
-            PurchasesAndSales purchase = new PurchasesAndSales();
-            purchase.Show();
-
-
+            PurchasesAndSales sales = new PurchasesAndSales();
+            sales.Show();
         }
 
-        private void PurchaseToolStripMenuItem1_Click(object sender, EventArgs e)
+        private void SalesToolStripMenuItem_Click(object sender, EventArgs e)
         {
             // set value on transactionType
             transactionType = "Sales";
             PurchasesAndSales sales = new PurchasesAndSales();
             sales.Show();
+        }
 
+        private void TransactionReportToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Transactions Form = new Transactions();
+            Form.Show();
+        }
+
+        private void CategoriesToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            Categories Form = new Categories();
+            Form.Show();
         }
     }
 }

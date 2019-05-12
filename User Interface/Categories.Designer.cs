@@ -45,8 +45,11 @@
             this.btnSave = new System.Windows.Forms.Button();
             this.btnClear = new System.Windows.Forms.Button();
             this.lblTitle = new System.Windows.Forms.Label();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.label2 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCategories)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // splitter1
@@ -74,7 +77,7 @@
             this.btnExit.BackColor = System.Drawing.Color.Tomato;
             this.btnExit.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnExit.ForeColor = System.Drawing.Color.White;
-            this.btnExit.Location = new System.Drawing.Point(668, 456);
+            this.btnExit.Location = new System.Drawing.Point(674, 456);
             this.btnExit.Name = "btnExit";
             this.btnExit.Size = new System.Drawing.Size(92, 33);
             this.btnExit.TabIndex = 7;
@@ -86,7 +89,7 @@
             // 
             this.lblCategoryID.AutoSize = true;
             this.lblCategoryID.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCategoryID.Location = new System.Drawing.Point(322, 55);
+            this.lblCategoryID.Location = new System.Drawing.Point(317, 97);
             this.lblCategoryID.Name = "lblCategoryID";
             this.lblCategoryID.Size = new System.Drawing.Size(95, 21);
             this.lblCategoryID.TabIndex = 8;
@@ -96,7 +99,7 @@
             // 
             this.lblDescription.AutoSize = true;
             this.lblDescription.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDescription.Location = new System.Drawing.Point(325, 180);
+            this.lblDescription.Location = new System.Drawing.Point(320, 222);
             this.lblDescription.Name = "lblDescription";
             this.lblDescription.Size = new System.Drawing.Size(92, 21);
             this.lblDescription.TabIndex = 10;
@@ -106,7 +109,7 @@
             // 
             this.lblSearch.AutoSize = true;
             this.lblSearch.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSearch.Location = new System.Drawing.Point(804, 55);
+            this.lblSearch.Location = new System.Drawing.Point(799, 97);
             this.lblSearch.Name = "lblSearch";
             this.lblSearch.Size = new System.Drawing.Size(60, 21);
             this.lblSearch.TabIndex = 12;
@@ -115,7 +118,7 @@
             // tbId
             // 
             this.tbId.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbId.Location = new System.Drawing.Point(462, 48);
+            this.tbId.Location = new System.Drawing.Point(457, 90);
             this.tbId.Multiline = true;
             this.tbId.Name = "tbId";
             this.tbId.ReadOnly = true;
@@ -125,7 +128,7 @@
             // tbTitle
             // 
             this.tbTitle.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbTitle.Location = new System.Drawing.Point(462, 104);
+            this.tbTitle.Location = new System.Drawing.Point(457, 146);
             this.tbTitle.Multiline = true;
             this.tbTitle.Name = "tbTitle";
             this.tbTitle.Size = new System.Drawing.Size(239, 30);
@@ -134,7 +137,7 @@
             // tbDescription
             // 
             this.tbDescription.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbDescription.Location = new System.Drawing.Point(462, 180);
+            this.tbDescription.Location = new System.Drawing.Point(457, 222);
             this.tbDescription.Multiline = true;
             this.tbDescription.Name = "tbDescription";
             this.tbDescription.Size = new System.Drawing.Size(239, 195);
@@ -143,7 +146,7 @@
             // tbSearch
             // 
             this.tbSearch.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbSearch.Location = new System.Drawing.Point(896, 48);
+            this.tbSearch.Location = new System.Drawing.Point(891, 90);
             this.tbSearch.Multiline = true;
             this.tbSearch.Name = "tbSearch";
             this.tbSearch.Size = new System.Drawing.Size(362, 28);
@@ -153,7 +156,7 @@
             // dgvCategories
             // 
             this.dgvCategories.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvCategories.Location = new System.Drawing.Point(799, 105);
+            this.dgvCategories.Location = new System.Drawing.Point(794, 147);
             this.dgvCategories.Name = "dgvCategories";
             this.dgvCategories.Size = new System.Drawing.Size(627, 270);
             this.dgvCategories.TabIndex = 5;
@@ -164,7 +167,7 @@
             this.btnDelete.BackColor = System.Drawing.Color.OrangeRed;
             this.btnDelete.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDelete.ForeColor = System.Drawing.Color.White;
-            this.btnDelete.Location = new System.Drawing.Point(581, 456);
+            this.btnDelete.Location = new System.Drawing.Point(587, 456);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(81, 33);
             this.btnDelete.TabIndex = 9;
@@ -177,7 +180,7 @@
             this.btnUpdate.BackColor = System.Drawing.Color.Gold;
             this.btnUpdate.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnUpdate.ForeColor = System.Drawing.Color.White;
-            this.btnUpdate.Location = new System.Drawing.Point(407, 456);
+            this.btnUpdate.Location = new System.Drawing.Point(413, 456);
             this.btnUpdate.Name = "btnUpdate";
             this.btnUpdate.Size = new System.Drawing.Size(81, 33);
             this.btnUpdate.TabIndex = 9;
@@ -187,10 +190,10 @@
             // 
             // btnSave
             // 
-            this.btnSave.BackColor = System.Drawing.Color.YellowGreen;
+            this.btnSave.BackColor = System.Drawing.Color.LimeGreen;
             this.btnSave.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSave.ForeColor = System.Drawing.Color.White;
-            this.btnSave.Location = new System.Drawing.Point(320, 456);
+            this.btnSave.Location = new System.Drawing.Point(326, 456);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(81, 33);
             this.btnSave.TabIndex = 9;
@@ -203,7 +206,7 @@
             this.btnClear.BackColor = System.Drawing.Color.BlueViolet;
             this.btnClear.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnClear.ForeColor = System.Drawing.Color.White;
-            this.btnClear.Location = new System.Drawing.Point(494, 456);
+            this.btnClear.Location = new System.Drawing.Point(500, 456);
             this.btnClear.Name = "btnClear";
             this.btnClear.Size = new System.Drawing.Size(81, 33);
             this.btnClear.TabIndex = 9;
@@ -215,11 +218,31 @@
             // 
             this.lblTitle.AutoSize = true;
             this.lblTitle.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTitle.Location = new System.Drawing.Point(322, 113);
+            this.lblTitle.Location = new System.Drawing.Point(317, 155);
             this.lblTitle.Name = "lblTitle";
             this.lblTitle.Size = new System.Drawing.Size(42, 21);
             this.lblTitle.TabIndex = 8;
             this.lblTitle.Text = "Title:";
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.BackColor = System.Drawing.Color.RoyalBlue;
+            this.pictureBox2.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(1865, 31);
+            this.pictureBox2.TabIndex = 15;
+            this.pictureBox2.TabStop = false;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.RoyalBlue;
+            this.label2.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(763, 1);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(138, 30);
+            this.label2.TabIndex = 8;
+            this.label2.Text = "CATEGORIES";
             // 
             // Categories
             // 
@@ -242,13 +265,15 @@
             this.Controls.Add(this.btnExit);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.splitter1);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.pictureBox2);
             this.Name = "Categories";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Categories";
-            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.SelectRole_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCategories)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -272,6 +297,8 @@
         private System.Windows.Forms.Button btnSave;
         private System.Windows.Forms.Button btnClear;
         private System.Windows.Forms.Label lblTitle;
+        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.Label label2;
 
         //private flavaGymnDataSet4TableAdapters.rolesTableAdapter rolesTableAdapter;
     }
