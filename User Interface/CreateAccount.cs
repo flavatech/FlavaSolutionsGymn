@@ -62,7 +62,7 @@ namespace FlavaGymn
 
             //Insert data into database
             bool success = d.Insert(u);
-
+            Clear();
             if (success == true)
             {
                 MessageBox.Show("User Successfully Created");

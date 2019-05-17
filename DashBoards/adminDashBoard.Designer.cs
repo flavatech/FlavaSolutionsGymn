@@ -43,9 +43,8 @@
             this.membersToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.addMemberToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.vewMembersToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.instructorsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.viewInstructorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.productsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.categoriesToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.subscriptionsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.inventoryToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.customersToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -57,7 +56,6 @@
             this.addStaffToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.viewStaffStatusToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.categoriesToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.pnlFooter.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -197,30 +195,15 @@
             // addMemberToolStripMenuItem
             // 
             this.addMemberToolStripMenuItem.Name = "addMemberToolStripMenuItem";
-            this.addMemberToolStripMenuItem.Size = new System.Drawing.Size(152, 26);
+            this.addMemberToolStripMenuItem.Size = new System.Drawing.Size(180, 26);
             this.addMemberToolStripMenuItem.Text = "Add Users";
             this.addMemberToolStripMenuItem.Click += new System.EventHandler(this.AddMemberToolStripMenuItem_Click);
             // 
             // vewMembersToolStripMenuItem
             // 
             this.vewMembersToolStripMenuItem.Name = "vewMembersToolStripMenuItem";
-            this.vewMembersToolStripMenuItem.Size = new System.Drawing.Size(152, 26);
+            this.vewMembersToolStripMenuItem.Size = new System.Drawing.Size(180, 26);
             this.vewMembersToolStripMenuItem.Text = "Vew Users";
-            // 
-            // instructorsToolStripMenuItem
-            // 
-            this.instructorsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.viewInstructorToolStripMenuItem});
-            this.instructorsToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.instructorsToolStripMenuItem.Name = "instructorsToolStripMenuItem";
-            this.instructorsToolStripMenuItem.Size = new System.Drawing.Size(96, 25);
-            this.instructorsToolStripMenuItem.Text = "Instructors";
-            // 
-            // viewInstructorToolStripMenuItem
-            // 
-            this.viewInstructorToolStripMenuItem.Name = "viewInstructorToolStripMenuItem";
-            this.viewInstructorToolStripMenuItem.Size = new System.Drawing.Size(185, 26);
-            this.viewInstructorToolStripMenuItem.Text = "View Instructor";
             // 
             // productsToolStripMenuItem
             // 
@@ -232,6 +215,14 @@
             this.productsToolStripMenuItem.Name = "productsToolStripMenuItem";
             this.productsToolStripMenuItem.Size = new System.Drawing.Size(83, 25);
             this.productsToolStripMenuItem.Text = "Products";
+            this.productsToolStripMenuItem.Click += new System.EventHandler(this.ProductsToolStripMenuItem_Click);
+            // 
+            // categoriesToolStripMenuItem1
+            // 
+            this.categoriesToolStripMenuItem1.Name = "categoriesToolStripMenuItem1";
+            this.categoriesToolStripMenuItem1.Size = new System.Drawing.Size(180, 26);
+            this.categoriesToolStripMenuItem1.Text = "Categories";
+            this.categoriesToolStripMenuItem1.Click += new System.EventHandler(this.CategoriesToolStripMenuItem1_Click);
             // 
             // subscriptionsToolStripMenuItem
             // 
@@ -301,15 +292,16 @@
             // addStaffToolStripMenuItem
             // 
             this.addStaffToolStripMenuItem.Name = "addStaffToolStripMenuItem";
-            this.addStaffToolStripMenuItem.Size = new System.Drawing.Size(195, 26);
+            this.addStaffToolStripMenuItem.Size = new System.Drawing.Size(180, 26);
             this.addStaffToolStripMenuItem.Text = "Add Staff";
             this.addStaffToolStripMenuItem.Click += new System.EventHandler(this.AddStaffToolStripMenuItem_Click);
             // 
             // viewStaffStatusToolStripMenuItem
             // 
             this.viewStaffStatusToolStripMenuItem.Name = "viewStaffStatusToolStripMenuItem";
-            this.viewStaffStatusToolStripMenuItem.Size = new System.Drawing.Size(195, 26);
-            this.viewStaffStatusToolStripMenuItem.Text = "View Staff Status";
+            this.viewStaffStatusToolStripMenuItem.Size = new System.Drawing.Size(180, 26);
+            this.viewStaffStatusToolStripMenuItem.Text = "View Staff";
+            this.viewStaffStatusToolStripMenuItem.Click += new System.EventHandler(this.ViewStaffStatusToolStripMenuItem_Click);
             // 
             // menuStrip1
             // 
@@ -319,20 +311,12 @@
             this.membersToolStripMenuItem,
             this.customersToolStripMenuItem,
             this.productsToolStripMenuItem,
-            this.transactionsToolStripMenuItem,
-            this.instructorsToolStripMenuItem});
+            this.transactionsToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(1822, 29);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
-            // 
-            // categoriesToolStripMenuItem1
-            // 
-            this.categoriesToolStripMenuItem1.Name = "categoriesToolStripMenuItem1";
-            this.categoriesToolStripMenuItem1.Size = new System.Drawing.Size(180, 26);
-            this.categoriesToolStripMenuItem1.Text = "Categories";
-            this.categoriesToolStripMenuItem1.Click += new System.EventHandler(this.CategoriesToolStripMenuItem1_Click);
             // 
             // adminDashBoard
             // 
@@ -385,8 +369,6 @@
         private System.Windows.Forms.ToolStripMenuItem membersToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem addMemberToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem vewMembersToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem instructorsToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem viewInstructorToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem productsToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem subscriptionsToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem inventoryToolStripMenuItem;
